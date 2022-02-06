@@ -1,0 +1,40 @@
+.table-quest {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 20vh;
+  width: 30vw;
+  margin-top: -50vh;
+  /* background-color:aquamarine; */
+}
+
+.back-packs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-packs img {
+  height: 5vh;
+}
+
+.done-sprint {
+  height: 7vh;
+  width: 7vh;
+  background-color:aqua
+}
+
+.buttons-sprint {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  color: black;
+}
+.buttons-sprint button {
+  font-size: 4vh;
+  background-color:cadetblue;
+  height: 5vh;
+  width: 10vw;
+}
