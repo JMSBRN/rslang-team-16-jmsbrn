@@ -1,4 +1,7 @@
 .header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
   color: rgb(0, 0, 0);
 	font-size: 20px;
 }
@@ -7,14 +10,29 @@
 	gap: 10px;
 	width: 60%;
 }
+.login-menu-btns-container {
+	display: flex;
+	align-items: center;
+	gap: 3px;
+}
 .active-link {
 	color: rgb(168, 164, 164);
 }
-.header-btn {
+.header-nav-btn {
 	font-size: 10px;
 	border: none;
 }
-.header-btn a {
+.header-nav-btn a {
 	text-decoration: none;
+}
+.login-btn,
+.menu-btn  {
+	font-size: 10px;
+	border: none;
+}
+.login-btn :hover,
+.menu-btn :hover  {
+	color: red;
+  cursor: pointer;
 }
 

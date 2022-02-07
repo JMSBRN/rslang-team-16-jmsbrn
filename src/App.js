@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React,{useState} from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Context } from './Context';
 import './app.css';
@@ -12,6 +12,8 @@ import  Games from './pages/Games';
 import Schoolbook from './pages/Schoolbook';
 import Statistics from './pages/Statistics';
 import About from './pages/About';
+import Login from './components/Login';
+import Menu from './components/Menu';
 
 function App() {
   const [words, setWords] = useState([]);
@@ -27,22 +29,52 @@ function App() {
     }else {
       setGroups(groups - 0)
     }
-  }
+  };
   const handlerSetGroupDecr = () => {
     if (groups > 1 ){
       setGroups(groups - 1)
     }else {
       setGroups(groups + 0)
     }
-  }
+  };
+  const closeMenu = () => {
+    setTimeout(() => {
+    const menu =  document.getElementById('menu');
+     menu.className = 'menu-hide';
+    }, 0);
+
+  };
+  const openMenu = () => {
+    setTimeout(() => {
+    const menu =  document.querySelector('.menu-hide');
+     menu.className = 'menu';
+    }, 0);
+  };
+  const closeLogin = () => {
+    setTimeout(() => {
+    const menu =  document.getElementById('login');
+     menu.className = 'login-hide';
+    }, 0);
+  };
+  const openLogin = () => {
+    setTimeout(() => {
+    const menu =  document.querySelector('.login-hide');
+     menu.className = 'login';
+    }, 0);
+  };
+ 
   return (
-    <div class="app">
+    <div className="app">
       <Context.Provider value={{
         handlerGetWords,
         handlerSetGroupInc,
         handlerSetGroupDecr,
         groups,
-        words
+        words,
+        closeMenu,
+        openMenu,
+        closeLogin,
+        openLogin
       }}>
        <Header/> 
        <Routes>
@@ -55,6 +87,9 @@ function App() {
             <Route path='*' element={<NoPage/>}/>
           </Route>
        </Routes>
+       <Login/>
+       <Login/>
+       <Menu/>
       <Footer/>
       </Context.Provider>
     </div>
