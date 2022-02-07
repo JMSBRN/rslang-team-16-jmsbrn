@@ -17,7 +17,7 @@ const Header = () => {
 					<NavLink to={'about'} className={({isActive})=> isActive ? 'active-link' : ''} >About</NavLink>
 				</button>
 				<button className='header-nav-btn'>
-					<NavLink to={'shoolbook'} className={({isActive})=> isActive ? 'active-link' : ''} >Schoolbook</NavLink>
+					<NavLink to={'schoolbook'} className={({isActive})=> isActive ? 'active-link' : ''} >Schoolbook</NavLink>
 				</button >
 				<button className='header-nav-btn'>
 					<NavLink to={'statistics'} className={({isActive})=> isActive ? 'active-link' : ''} >Statistics</NavLink>

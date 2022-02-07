@@ -9,3 +9,11 @@
 .menu-hide {
 	visibility: hidden;
 }
+.menu-nav-links {
+ display: grid;
+ gap: 10px;
+ margin-left: 10px;
+}
+.menu-link{
+  text-decoration: none;
+}

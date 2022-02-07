@@ -1,5 +1,45 @@
 .home {
+	
+	width: 100%;
+	height: 100vh;
 	background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-	font-size: 15px;
+}
+.home-main-title {
+	width: 80%;
+	color: rgb(62, 72, 161);
+}
+.home-description-container {
+	width: 90%;
+	color: rgb(81, 216, 133);
+}
+.home-main-img-container {
+ margin-left: 30%;
+	width: 400px;
+	height: 300px;
+	margin-bottom: 0;
+	background-color: burlywood;
+}
+.home-nav-links {
+	display: flex;
+	gap: 5px;
+}
+.home-link {
+	text-decoration: none;
+	color: rgb(134, 197, 199);
+}
+.home-link:hover {
+	text-decoration: none;
+	color: rgb(29, 80, 82);
+}
+.home-video-btn {
+	border: none;
+	border-radius: 2px;
+	background-color: antiquewhite;
+	color: rgb(101, 101, 221);
+	cursor: pointer;
+}
+.home-video-btn:hover {
+	border: none;
+	background-color: rgb(233, 184, 120);
+	cursor: pointer;
 }

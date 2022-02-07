@@ -4,9 +4,61 @@
 	left: 30%;
 	width: 250px;
 	height: 300px;
-	background-color: rgb(228, 228, 228);
+	background-color: rgb(208, 199, 250);
 	z-index: 1;
+}
+.login-close-btn {
+	border: none;
+	border-radius: 30px;
+	cursor: pointer;
+}
+.login-close-btn:hover {
+	background-color: rgb(95, 199, 231);
+  color: rgb(255, 255, 255);
 }
 .login-hide {
 	display: none;
+}
+.login-container {
+	margin: 0 auto;
+	width: 80%;
+	height: 50%;
+}
+.login-title {
+	font-size: 10px;
+	color: rgb(117, 117, 204);
+}
+.login-paragraf {
+	font-size: 10px;
+	color: rgb(255, 175, 109);
+}
+.login-input-container {
+	display: grid;
+	gap: 5px;
+}
+.login-input {
+	border: navajowhite;
+	font-size: 10px;
+	background-color: aquamarine;
+}
+.login-submit-btn {
+	color: blueviolet;
+}
+.login-submit-btn:hover {
+	color: rgb(218, 61, 61);
+	cursor: pointer;
+}
+.login-links-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.login-link {
+	margin-top: 10px;
+	font-size: 10px;
+	text-decoration: none;
+	cursor: pointer;
+}
+.login-link:hover {
+	color: red;
 }

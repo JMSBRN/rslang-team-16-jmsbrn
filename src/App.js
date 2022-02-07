@@ -81,7 +81,7 @@ function App() {
          <Route path='/' element={<Layout/>}>
             <Route index element={<Home/>}/>
             <Route path='games' element={<Games/>}/>
-            <Route path='shoolbook' element={<Schoolbook/>}/>
+            <Route path='schoolbook' element={<Schoolbook/>}/>
             <Route path='statistics' element={<Statistics/>}/>
             <Route path='about' element={<About/>}/>
             <Route path='*' element={<NoPage/>}/>
