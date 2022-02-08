@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Context } from './Context';
 import './app.css';
-import {getWords} from './Api';
+import {getWords,createUser} from './Api';
 import Header from './Header'
 import Footer from './Footer.jsx';
 import Layout from './Layout';
@@ -18,6 +18,10 @@ import Menu from './components/Menu';
 function App() {
   const [words, setWords] = useState([]);
   const [groups, setGroups] = useState(1);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [loginValues, setLoginValues] = useState('');
+
   const handlerGetWords = () => {
     getWords(groups,1).then(resp => 
       setWords(resp.items)
@@ -62,6 +66,16 @@ function App() {
      menu.className = 'login';
     }, 0);
   };
+  const handleGetEmail = (e) => {
+    setEmail(e.target.value);
+  };
+  const handleGetPassword = (e) => {
+    setPassword(e.target.value);
+  };
+  
+	const getLoginValues = () => {
+		setLoginValues(email, password);
+	}
  
   return (
     <div className="app">
@@ -74,7 +88,13 @@ function App() {
         closeMenu,
         openMenu,
         closeLogin,
-        openLogin
+        openLogin,
+        handleGetEmail,
+        handleGetPassword,
+        email,
+        password,
+        getLoginValues,
+        loginValues
       }}>
        <Header/> 
        <Routes>
