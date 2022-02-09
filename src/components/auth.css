@@ -63,3 +63,6 @@
 .auth-link:hover {
 	color: red;
 }
+.auth-checkbox-title {
+	font-size: 10px;
+}

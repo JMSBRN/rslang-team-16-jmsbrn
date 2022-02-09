@@ -62,3 +62,6 @@
 .login-link:hover {
 	color: red;
 }
+.login-checkbox-title {
+	font-size: 10px;
+}
