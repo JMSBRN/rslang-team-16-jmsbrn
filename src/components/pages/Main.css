@@ -2,9 +2,6 @@
   display: flex;
   justify-content: center;
   align-content: center;
-  background: url('https://rslang-team23-alexk08.netlify.app/static/media/audiochallenge-bg.87c1a65c.jpg');
-  background-position: center;
-  background-size: cover;
   width: 100vw;
   height: 100vh;
 }
@@ -22,14 +19,16 @@
   justify-content: center;
   align-items: center;
   color: #fff;
-  width: 200px;
-  height: 60px;
-  background: rgb(75, 72, 72);
+  width: 350px;
+  height: 80px;
+  background: rgba(3, 0, 184, 0.575);
   margin: 5px;
   transition: .3s;
+  font-weight: 700;
+  font-size: 25px;
 }
 
 .game-controls a:hover {
-  background: rgb(143, 135, 135);
-  color: rgb(237, 252, 25);
+  background: rgba(255, 255, 255, 0.445);
+  color: rgb(0, 0, 0);
 }
