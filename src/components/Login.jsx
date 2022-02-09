@@ -3,15 +3,14 @@ import {Context} from '../Context';
 
 function Login() {
 	const {closeLogin,openAuth, handleGetEmail, handleGetPassword, getLoginValues} = useContext(Context);
-	function showPassword() {
+	const showPassword = () => {
 		var x = document.getElementById("login-input-psw");
 		if (x.type === "password") {
 			x.type = "text";
 		} else {
 			x.type = "password";
 		}
-	}
-
+	};
 	return (
 	<div id='login' className='login-hide'>
 		<button onClick={closeLogin} className='login-close-btn'>close</button>
@@ -20,7 +19,7 @@ function Login() {
 			<p className='login-paragraf'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit ipsum numquam voluptate atque, iure voluptatum dicta nisi ratione soluta tempore!</p>
 			<form className="login-input-container">
 				<input onChange={handleGetEmail} className='login-input' type="email" placeholder='E-mail'/>
-				<input onChange={handleGetPassword}   id="login-input-psw" className='login-input' type="password"  minLength={8} placeholder='Password' required/>
+				<input onChange={handleGetPassword}   id="login-input-psw" className='login-input' name='password' type="password" autoComplete="on" minLength={8} placeholder='Password' required/>
 				<button onClick={getLoginValues} className='login-submit-btn'>Login</button>
 			</form>
 			<input onClick={showPassword} type="checkbox" name="login-show-psw"/>
@@ -31,6 +30,6 @@ function Login() {
 			</div>
 		</div>
 	</div>
-	);
-}
+	)
+};
 export default Login;

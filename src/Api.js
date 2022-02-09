@@ -7,18 +7,9 @@ const signIn = `${base}/signin`;
 export const getWords = async (group, page) => {
 	const response =  await fetch(`${words}?group=${group}&page=${page}`);
 	return {
-		items: await response.json(),
-		count: response.headers.get('X-Total-Count')
-
+		items: await response.json()
 	};
 };
-
-const user = {
-	"email": "sdddddd@user.com",
-	"password": "Gfhjkm_123"
- };
-
-
 export const createUser = async (user) => {
 	const rawResponse = await fetch(users, {
 		method: 'POST',
@@ -29,14 +20,8 @@ export const createUser = async (user) => {
 		body: JSON.stringify(user)
 	});
 	const content = await rawResponse.json();
-
-console.log(content);
+  console.log(content);
 };
-
-
-
- //createUser(user);
-
 export const loginUser = async (user )=> {
   const rawResponse = await fetch(signIn, {
     method: 'POST',
@@ -46,14 +31,10 @@ export const loginUser = async (user )=> {
     },
     body: JSON.stringify(user)
   });
-  const content = await rawResponse.json();
-
- console.log(content);
+  const content = await rawResponse.json()
+  console.log(content);
 };
 
-
-
-//loginUser(user);
 
 
 

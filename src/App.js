@@ -28,7 +28,7 @@ function App() {
     getWords(groups,1).then(resp => 
       setWords(resp.items)
       )
-  }
+  };
   const handlerSetGroupInc = () => { 
     if (groups < 5 ){
       setGroups(groups + 1)
@@ -48,7 +48,6 @@ function App() {
     const menu =  document.getElementById('menu');
      menu.className = 'menu-hide';
     }, 0);
-
   };
   const openMenu = () => {
     setTimeout(() => {
@@ -86,26 +85,25 @@ function App() {
   const handleGetPassword = (e) => {
     setPassword(e.target.value);
   };
-  
-	const getLoginValues = () => {
+	const getLoginValues = (e) => {
+    e.preventDefault();
     const user = {
       email: `${email}`,
       password: `${password}`
      };
      setLoginValues(email, password);
-     loginUser(user)
-	}
+     loginUser(user);
+	};
  
-	const getRegistrValues = () => {
+	const getRegistrValues = (e) => {
+    e.preventDefault();
     const user = {
       email: `${email}`,
       password: `${password}`
      };
      setRegistrValues(email, password);
-     createUser(user)
-     
-	}
- 
+     createUser(user);
+	};
   return (
     <div className="app">
       <Context.Provider value={{
@@ -145,5 +143,5 @@ function App() {
       </Context.Provider>
     </div>
   );
-}
+};
 export default App;

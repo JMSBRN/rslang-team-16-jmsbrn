@@ -11,7 +11,7 @@ const Footer = () => {
 			<a className='footer-git-link' href='https://github.com/JMSBRN'>JMSBRN</a>
 		</div>
 		<img src={`${imgRsSchool}`} alt='rsSchool/svg' width="50" height="20"></img>
-		<a className='footer-rsSchool-link' href='https://rs.school/js/'>rsSchool</a>
+		<a className='footer-rsSchool-link' href='https://rs.school/js/'>The Rolling Scopes</a>
 		</div>
 	);
 };
