@@ -13,7 +13,11 @@ export const getWords = async (group, page) => {
 	};
 };
 
-const user = { "email": "d@user.com", "password": "Gfhjkm_123" };
+const user = {
+	"email": "sdddddd@user.com",
+	"password": "Gfhjkm_123"
+ };
+
 
 export const createUser = async (user) => {
 	const rawResponse = await fetch(users, {
@@ -26,12 +30,12 @@ export const createUser = async (user) => {
 	});
 	const content = await rawResponse.json();
 
-	return content;
+console.log(content);
 };
 
 
 
-//createUser(user);
+ //createUser(user);
 
 export const loginUser = async (user )=> {
   const rawResponse = await fetch(signIn, {
@@ -44,14 +48,12 @@ export const loginUser = async (user )=> {
   });
   const content = await rawResponse.json();
 
-  return content;
+ console.log(content);
 };
 
 
 
 //loginUser(user);
-
-
 
 
 

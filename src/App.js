@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Context } from './Context';
 import './app.css';
-import {getWords,createUser} from './Api';
+import {getWords,createUser, loginUser} from './Api';
 import Header from './Header'
 import Footer from './Footer.jsx';
 import Layout from './Layout';
@@ -14,6 +14,7 @@ import Statistics from './pages/Statistics';
 import About from './pages/About';
 import Login from './components/Login';
 import Menu from './components/Menu';
+import Auth from './components/Auth';
 
 function App() {
   const [words, setWords] = useState([]);
@@ -21,6 +22,7 @@ function App() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loginValues, setLoginValues] = useState('');
+  const [registrValues, setRegistrValues] = useState('');
 
   const handlerGetWords = () => {
     getWords(groups,1).then(resp => 
@@ -66,6 +68,18 @@ function App() {
      menu.className = 'login';
     }, 0);
   };
+  const closeAuth = () => {
+    setTimeout(() => {
+    const menu =  document.getElementById('auth');
+     menu.className = 'auth-hide';
+    }, 0);
+  };
+  const openAuth = () => {
+    setTimeout(() => {
+    const menu =  document.querySelector('.auth-hide');
+     menu.className = 'auth';
+    }, 0);
+  };
   const handleGetEmail = (e) => {
     setEmail(e.target.value);
   };
@@ -74,7 +88,22 @@ function App() {
   };
   
 	const getLoginValues = () => {
-		setLoginValues(email, password);
+    const user = {
+      email: `${email}`,
+      password: `${password}`
+     };
+     setLoginValues(email, password);
+     loginUser(user)
+	}
+ 
+	const getRegistrValues = () => {
+    const user = {
+      email: `${email}`,
+      password: `${password}`
+     };
+     setRegistrValues(email, password);
+     createUser(user)
+     
 	}
  
   return (
@@ -89,12 +118,14 @@ function App() {
         openMenu,
         closeLogin,
         openLogin,
+        closeAuth,
+        openAuth,
         handleGetEmail,
         handleGetPassword,
         email,
         password,
         getLoginValues,
-        loginValues
+        getRegistrValues
       }}>
        <Header/> 
        <Routes>
@@ -108,7 +139,7 @@ function App() {
           </Route>
        </Routes>
        <Login/>
-       <Login/>
+       <Auth/>
        <Menu/>
       <Footer/>
       </Context.Provider>

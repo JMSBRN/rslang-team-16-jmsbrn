@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import {Context} from '../Context';
 
 function Login() {
-	const {closeLogin, handleGetEmail, handleGetPassword, getLoginValues} = useContext(Context);
+	const {closeLogin,openAuth, handleGetEmail, handleGetPassword, getLoginValues} = useContext(Context);
 
 
 	return (
@@ -14,11 +14,11 @@ function Login() {
 			<div className="login-input-container">
 				<input onChange={handleGetEmail} className='login-input' type="text" placeholder='E-mail'/>
 				<input onChange={handleGetPassword} className='login-input' type="text" placeholder='Password'/>
-				<button onClick={getLoginValues} className='login-submit-btn'>Submiit</button>
+				<button onClick={getLoginValues} className='login-submit-btn'>Login</button>
 			</div>
 			<div className="login-links-container">
 				<a className='login-link' href="/#">Forgot your passowrd?</a>
-				<a className='login-link' href="/#">Registration</a>
+				<a onClick={openAuth} className='login-link' href="/#">Registration</a>
 			</div>
 		</div>
 	</div>

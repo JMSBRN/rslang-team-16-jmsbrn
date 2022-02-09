@@ -1,64 +1,65 @@
-.login {
+.auth {
 	position: absolute;
 	top: 100px;
 	left: 30%;
 	width: 250px;
 	height: 300px;
-	background-color: rgb(208, 199, 250);
+	background-color: rgb(214, 214, 214);
 	z-index: 1;
 }
-.login-close-btn {
+.auth-close-btn {
 	border: none;
 	border-radius: 30px;
 	cursor: pointer;
 }
-.login-close-btn:hover {
-	background-color: rgb(95, 199, 231);
-  color: rgb(255, 255, 255);
+.auth-close-btn:hover {
+	background-color: rgb(255, 255, 255);
+  color: rgb(201, 54, 54);
 }
-.login-hide {
+.auth-hide {
 	display: none;
 }
-.login-container {
+.auth-container {
 	margin: 0 auto;
+	margin-top: 50px;
 	width: 80%;
 	height: 50%;
 }
-.login-title {
+.auth-title {
 	font-size: 10px;
-	color: rgb(117, 117, 204);
+	color: rgb(255, 255, 255);
 }
-.login-paragraf {
+.auth-paragraf {
 	font-size: 10px;
-	color: rgb(255, 175, 109);
+	color: rgb(0, 0, 0);
 }
-.login-input-container {
+.auth-input-container {
 	display: grid;
 	gap: 5px;
 }
-.login-input {
+.auth-input {
 	border: navajowhite;
 	font-size: 10px;
-	background-color: rgb(254, 255, 255);
+	background-color: rgb(220, 234, 255);
 }
-.login-submit-btn {
-	color: blueviolet;
+.auth-submit-btn {
+	color: rgb(83, 197, 31);
 }
-.login-submit-btn:hover {
+.auth-submit-btn:hover {
 	color: rgb(218, 61, 61);
 	cursor: pointer;
 }
-.login-links-container {
+.auth-links-container {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
 }
-.login-link {
+.auth-link {
 	margin-top: 10px;
 	font-size: 10px;
 	text-decoration: none;
 	cursor: pointer;
 }
-.login-link:hover {
+.auth-link:hover {
 	color: red;
 }
