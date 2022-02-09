@@ -21,6 +21,7 @@ export const createUser = async (user) => {
 	});
 	const content = await rawResponse.json();
   console.log(content);
+	localStorage.setItem('user', JSON.stringify(user))
 };
 export const loginUser = async (user )=> {
   const rawResponse = await fetch(signIn, {
@@ -33,10 +34,9 @@ export const loginUser = async (user )=> {
   });
   const content = await rawResponse.json()
   console.log(content);
+	localStorage.setItem('userId', JSON.stringify(content.userId))
+	localStorage.setItem('userToken', JSON.stringify(content.token))
 };
-
-
-
 
 
 
