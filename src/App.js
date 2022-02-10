@@ -85,24 +85,22 @@ function App() {
   const handleGetPassword = (e) => {
     setPassword(e.target.value);
   };
-	const getLoginValues = (e) => {
-    e.preventDefault();
+	const getLoginValues = () => {
     const user = {
       email: `${email}`,
       password: `${password}`
      };
      setLoginValues(email, password);
-     loginUser(user);
+     loginUser(user) 
 	};
- 
-	const getRegistrValues = (e) => {
-    e.preventDefault();
+	const getRegistrValues = () => {
     const user = {
       email: `${email}`,
       password: `${password}`
      };
      setRegistrValues(email, password);
      createUser(user);
+    
 	};
   return (
     <div className="app">
