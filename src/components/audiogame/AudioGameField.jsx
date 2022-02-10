@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { BsArrowRight } from "react-icons/bs";
 
-
 import "./AudioGameField.css";
 import AudioGameNav from "../AudioGameNav";
 import { useNavigate } from "react-router-dom";
@@ -19,7 +18,8 @@ const AudioGameField = (props) => {
   const [word, setWord] = useState({});
   const [score, setScore] = useState(10);
   const [loader, setLoader] = useState(false);
-  
+  const [level, setLevel] = useState(1);
+  const [isMute, setMute] = useState(false);
 
   useEffect(() => {
     getWords();
@@ -65,14 +65,20 @@ const AudioGameField = (props) => {
   };
   const playCorrectSound = () => {
     const correct = new Audio();
+    isMute ? correct.muted = true : correct.muted = false;
     correct.src = `https://rslang-team23-alexk08.netlify.app/audio/correct.mp3`;
     correct.play();
   };
   const playWrongSound = () => {
     const wrong = new Audio();
+    isMute ? wrong.muted = true : wrong.muted = false;
+
     wrong.src = `https://rslang-team23-alexk08.netlify.app/audio/error.mp3`;
     wrong.play();
+    
   };
+  
+ 
 
   const getRightAnswer = (id) => {
     setShowAnswer(true);
@@ -91,10 +97,10 @@ const AudioGameField = (props) => {
         <Loader />
       ) : (
         <div className="game-container">
-          <AudioGameNav star={star} score={score} />
+          <AudioGameNav star={star} score={score} isMute={isMute} setMute={setMute} />
           <div className="audio-game-field">
             <div className={star < 1 ? "pop-up none" : "pop-up"}>
-              <p>siznig balingiz : {score}</p>
+              <p>Your score is : {score}</p>
               <button
                 onClick={() => {
                   navigate("/");
@@ -106,12 +112,14 @@ const AudioGameField = (props) => {
             <button
               className="audio-game-listen-btn"
               onClick={() => playAudio()}
-            >
-            </button>
-            <p className={showAnswer ? "hidden-word show" : "hidden-word"}
-            dangerouslySetInnerHTML={{
-                    __html:(type === "word" ? word.word?.toLowerCase() : word.textMeaning),
-                  }} />
+            ></button>
+            <p
+              className={showAnswer ? "hidden-word show" : "hidden-word"}
+              dangerouslySetInnerHTML={{
+                __html:
+                  type === "word" ? word.word?.toLowerCase() : word.textMeaning,
+              }}
+            />
             <div className="audio-game-word-list">
               {words.map((item, index) => (
                 <button
@@ -120,14 +128,20 @@ const AudioGameField = (props) => {
                   className={
                     showAnswer && item.id === word.id
                       ? "option-word-btn true"
-                      : !showAnswer ? "option-word-btn" : "option-word-btn false"
+                      : !showAnswer
+                      ? "option-word-btn"
+                      : "option-word-btn false"
                   }
                   value={item.word}
                   onClick={() => {
                     getRightAnswer(item.id);
                   }}
                   dangerouslySetInnerHTML={{
-                    __html: index + 1 + ". " + (type === "word" ? item.wordTranslate : item.word),
+                    __html:
+                      index +
+                      1 +
+                      ". " +
+                      (type === "word" ? item.wordTranslate : item.word),
                   }}
                 />
               ))}
@@ -138,7 +152,7 @@ const AudioGameField = (props) => {
                 getRandomWords(list);
               }}
             >
-              <BsArrowRight/>
+              <BsArrowRight />
             </button>
             <button
               disabled={!showAnswer ? false : true}
