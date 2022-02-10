@@ -85,7 +85,8 @@ function App() {
   const handleGetPassword = (e) => {
     setPassword(e.target.value);
   };
-	const getLoginValues = () => {
+	const getLoginValues = (e) => {
+    e.preventDefault();
     const user = {
       email: `${email}`,
       password: `${password}`
@@ -93,7 +94,8 @@ function App() {
      setLoginValues(email, password);
      loginUser(user) 
 	};
-	const getRegistrValues = () => {
+	const getRegistrValues = (e) => {
+    e.preventDefault();
     const user = {
       email: `${email}`,
       password: `${password}`
