@@ -2,6 +2,7 @@ import './header.css';
 import Button from '../../elements/button/button-sprint';
 import { fullScreen } from '../../elements/button/functions';
 
+
 const HeaderSprint = () => {
   return (
     <div className='header-sprint'>

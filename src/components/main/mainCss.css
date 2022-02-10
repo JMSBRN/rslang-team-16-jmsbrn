@@ -7,6 +7,15 @@
   padding-top: 10vh;
 }
 
+.start-sprint{
+  background-color: aquamarine;
+  position: absolute;
+  width: 15vw;
+  height: 7vh;
+  top: 30vh;
+  right: 20vh;
+}
+
 .main-line {
   display: flex;
   align-items: center;
@@ -20,4 +29,14 @@
 .main-line img {
   height: 30ch; 
   margin-left: 15ch;
+}
+
+.word {
+  width: 100%;
+  font-size: 10vh;
+  position: fixed;
+  top: 50%;
+  right: 10%;
+  color:brown; 
+  margin: 0;
 }
