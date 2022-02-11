@@ -20,8 +20,11 @@ export const createUser = async (user) => {
 		body: JSON.stringify(user)
 	});
 	const content = await rawResponse.json();
-	console.log(content);
-	localStorage.setItem('user', JSON.stringify(user))	
+	localStorage.setItem('name', JSON.stringify(content.name))	
+	localStorage.setItem('email', JSON.stringify(content.email))	
+	localStorage.setItem('user', JSON.stringify(content.email))	
+
+
 };
 export const loginUser = async (user )=> {
   const rawResponse = await fetch(signIn, {
@@ -33,11 +36,9 @@ export const loginUser = async (user )=> {
     body: JSON.stringify(user)
   });
   const content = await rawResponse.json()
-  console.log(content);
-	localStorage.setItem('userId', JSON.stringify(content.userId))
-	localStorage.setItem('userToken', JSON.stringify(content.token))
+  localStorage.setItem('token', JSON.stringify(content.token))
+	localStorage.setItem('name', JSON.stringify(content.name))
+  localStorage.setItem('refreshToken', JSON.stringify(content.refreshToken))
+	localStorage.setItem('id', JSON.stringify(content.userId))
 };
-
-
-
 

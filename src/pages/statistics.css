@@ -1,5 +1,31 @@
 .statistics {
-	background-color: rgb(45, 73, 199);
-  color: rgb(255, 255, 255);
+	width: 100%;
+	height: 550px;
+	background-color: rgb(226, 229, 241);
+  color: rgb(139, 85, 85);
 	font-size: 20px;
+}
+.st-title {
+	text-align: center;
+}
+.st-games-container {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	justify-content: center;
+}
+.st-game {
+	text-align: center;
+	width: 100px;
+	height: 200px;
+	background-color: rgb(81, 93, 148)	;
+	color: wheat;
+}
+.st-total-count {
+	margin: 0 auto;
+	text-align: center;
+	width: 300px;
+	height: 100px;
+	color: rgb(255, 255, 255);
+	background-color: rgb(91, 156, 54);
 }

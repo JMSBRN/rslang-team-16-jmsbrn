@@ -19,6 +19,7 @@ import Auth from './components/Auth';
 function App() {
   const [words, setWords] = useState([]);
   const [groups, setGroups] = useState(1);
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loginValues, setLoginValues] = useState('');
@@ -79,6 +80,9 @@ function App() {
      menu.className = 'auth';
     }, 0);
   };
+  const handleGetName = (e) => {
+    setName(e.target.value);
+  };
   const handleGetEmail = (e) => {
     setEmail(e.target.value);
   };
@@ -97,13 +101,17 @@ function App() {
 	const getRegistrValues = (e) => {
     e.preventDefault();
     const user = {
+      name: `${name}`,
       email: `${email}`,
       password: `${password}`
      };
-     setRegistrValues(email, password);
+     setRegistrValues(name, email, password);
      createUser(user);
-    
 	};
+  const clearLocalStorage = () => {
+    localStorage.clear();
+    window.location.reload();
+  };
   return (
     <div className="app">
       <Context.Provider value={{
@@ -118,12 +126,14 @@ function App() {
         openLogin,
         closeAuth,
         openAuth,
+        handleGetName,
         handleGetEmail,
         handleGetPassword,
         email,
         password,
         getLoginValues,
-        getRegistrValues
+        getRegistrValues,
+        clearLocalStorage
       }}>
        <Header/> 
        <Routes>

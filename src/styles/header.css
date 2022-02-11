@@ -25,14 +25,18 @@
 .header-nav-btn a {
 	text-decoration: none;
 }
+.out-btn,
 .login-btn,
 .menu-btn  {
 	font-size: 10px;
 	border: none;
 }
 .login-btn :hover,
+.out-btn :hover,
 .menu-btn :hover  {
 	color: red;
   cursor: pointer;
 }
+
+
 

@@ -2,7 +2,7 @@ import React,{useContext} from 'react'
 import { Context } from '../Context'
 
 function Auth() {
-	const {closeAuth, handleGetEmail, handleGetPassword, getRegistrValues} = useContext(Context);
+	const {closeAuth, handleGetEmail, handleGetName, handleGetPassword, getRegistrValues} = useContext(Context);
 	const showPassword = () => {
 		var x = document.getElementById("auth-input-psw");
 		if (x.type === "password") {
@@ -18,6 +18,7 @@ function Auth() {
 				<h4 className='auth-title'>Lorem ipsum dolor sit amet consectetur</h4>
 				<p className='auth-paragraf'>Lorem ipsum dolor sit!</p>
 				<form className="auth-input-container">
+					<input onChange={handleGetName} className='auth-input' type="text" placeholder='name'/>
 					<input onChange={handleGetEmail} className='auth-input' type="email" placeholder='E-mail'/>
 					<input onChange={handleGetPassword} id="auth-input-psw"  className='auth-input' name='password' type="password" autoComplete="on" minLength={8} placeholder='Password' required/>
 					<button onClick={getRegistrValues} className='auth-submit-btn'>Register</button>
