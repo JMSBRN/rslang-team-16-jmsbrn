@@ -15,9 +15,11 @@
 	justify-content: center;
 }
 .st-game {
-	text-align: center;
-	width: 100px;
+	padding: 10px;
+	margin-bottom: 20px;
+	width: 200px;
 	height: 200px;
+	text-align: center;
 	background-color: rgb(81, 93, 148)	;
 	color: wheat;
 }

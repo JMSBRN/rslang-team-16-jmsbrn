@@ -96,7 +96,7 @@ function App() {
       password: `${password}`
      };
      setLoginValues(email, password);
-     loginUser(user) 
+     loginUser(user) ;
 	};
 	const getRegistrValues = (e) => {
     e.preventDefault();
@@ -111,6 +111,43 @@ function App() {
   const clearLocalStorage = () => {
     localStorage.clear();
     window.location.reload();
+  };
+  //??  
+  const [countA, setCountA] = useState(0);
+  const [countB, setCountB] = useState(0);
+  const [countC, setCountC] = useState(0);
+  const [countD, setCountD] = useState(0);
+  const inecreaseA = () => {
+     setCountA(countA + 1);
+  };
+  const decreaseA = () => {
+    if(countA > 0){
+     setCountA(countA - 1);
+    }
+  };
+  const inecreaseB = () => {
+    setCountB(countB + 1);
+  };
+  const decreaseB = () => {
+    if(countB > 0){
+     setCountB(countB - 1);
+    }
+  };
+  const inecreaseC = () => {
+    setCountC(countC + 1);
+  };
+  const decreaseC = () => {
+    if(countC > 0){
+     setCountC(countC - 1);
+    }
+  };
+  const inecreaseD = () => {
+    setCountD(countD + 1);
+  };
+  const decreaseD = () => {
+    if(countD > 0){
+     setCountD(countD - 1);
+    }
   };
   return (
     <div className="app">
@@ -133,7 +170,19 @@ function App() {
         password,
         getLoginValues,
         getRegistrValues,
-        clearLocalStorage
+        clearLocalStorage,
+        countA,
+        countB,
+        countC,
+        countD,
+        inecreaseA,
+        decreaseA,
+        inecreaseB,
+        decreaseB,
+        inecreaseC,
+        decreaseC,
+        inecreaseD,
+        decreaseD,
       }}>
        <Header/> 
        <Routes>

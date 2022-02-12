@@ -1,47 +1,35 @@
-import React,{useState} from 'react';
+import React,{useContext} from 'react';
+import { Context } from '../Context';
 
 const Games = () => {
- const [countA, setCountA] = useState(0);
- const [countB, setCountB] = useState(0);
- const [countC, setCountC] = useState(0);
- const [countD, setCountD] = useState(0);
- const nameUser = localStorage.getItem('name');
- const inecreaseA = () => {
+const {
+	countA,
+	inecreaseA,
+	decreaseA,
+	countB,
+	inecreaseB,
+	decreaseB,
+	countC,
+	inecreaseC,
+	decreaseC,
+	countD,
+	inecreaseD,
+	decreaseD
+} = useContext(Context);
 
-		setCountA(countA + 1);
- };
- const decreaseA = () => {
-	 if(countA > 0){
-		setCountA(countA - 1);
-	 }
- };
- const inecreaseB = () => {
-	 setCountB(countB + 1);
- };
- const decreaseB = () => {
-	 if(countB > 0){
-		setCountB(countB - 1);
-	 }
- };
- const inecreaseC = () => {
-	 setCountC(countC + 1);
- };
- const decreaseC = () => {
-	 if(countC > 0){
-    setCountC(countC - 1);
-	 }
- };
- const inecreaseD = () => {
-	 setCountD(countD + 1);
- };
- const decreaseD = () => {
-	 if(countD > 0){
-		setCountD(countD - 1);
-	 }
- };
+const nameUser = localStorage.getItem('name');
+const id = localStorage.getItem('id');
+localStorage.setItem(id, JSON.stringify(
+	{
+		countA: `${countA}`,
+		countB: `${countB}`,
+		countC: `${countC}`,
+		countD: `${countD}`
+	}));
+
 	return (
 	<div className='games'>
-		<div className="user-title">{JSON.parse(nameUser)}</div>
+		<div className="user-title">{nameUser?JSON.parse(nameUser): 'No user in login'}</div>
 		<div className="game-one">
 			<div className="game-title">Game-One</div>
 			<div className="lerning-words">lerning-words</div>
@@ -72,7 +60,6 @@ const Games = () => {
 				<button onClick={decreaseD} className='decrease-btn'>-</button>
 			</div>
 		</div>
-		
 	</div>
 	);
 };
