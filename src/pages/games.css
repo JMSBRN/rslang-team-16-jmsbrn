@@ -1,5 +1,23 @@
 .games {
-	background-color: rgb(194, 45, 199);
-  color: rgb(0, 0, 0);
+	display: flex;
+	gap: 10px;
+	height: 500px;
+	justify-content: space-around;
+	background-color: rgb(222, 219, 223);
 	font-size: 20px;
+}
+.game-one,
+.game-two {
+  width: 200px;
+	height: 300px;
+	margin-top: 50px;
+	background-color: rgb(41, 90, 90);
+	color: white;
+	text-align: center;
+}
+.user-title {
+	position: absolute;
+	padding-top: 5px;
+	width: 100%;
+	text-align: center;
 }

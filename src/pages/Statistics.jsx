@@ -16,7 +16,7 @@ if(id !== null){
 };
 	return (
 		<div className='statistics'>
-			<span>{localValues? localValues.name :'No user in login'}</span>
+			<div className='statistic-user-title'>{localValues? localValues.name :'No user in login'}</div>
       <h3 className='st-title'>Day Statistic </h3>
 			<div className="st-games-container">
 				<div className="st-game">Game One
