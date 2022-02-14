@@ -1,20 +1,19 @@
+
 import React, {useEffect, useContext } from "react";
 import WordsPagination from "../components/WordsPagination";
 import { Context } from "../Context";
 
 function Schoolbook() {
-  const { 
-  getWordsHandle,
-  words,
-  handlerSetGroupInc,
-  handlerSetGroupDecr
-     }
-  = useContext(Context);
-
-     useEffect(() => {
-      getWordsHandle();
-     },[]);
-
+  const { getWordsHandle, words, pagePagination} = useContext(Context);
+  if(pagePagination !== null){
+    localStorage.setItem('page', JSON.stringify(pagePagination));
+  }else {
+    localStorage.setItem('page', JSON.stringify(0));
+    window.location.reload();
+  };
+  useEffect(() => {
+  getWordsHandle();
+  },[pagePagination]);
   return (
     <div className="schoolbook">
       <div className="schoolbook-stages">
@@ -36,13 +35,9 @@ function Schoolbook() {
           </div>
         ))}
       </div>
-      <div className="btns">
-        <button onClick={getWordsHandle}>words</button>
-        <button onClick={handlerSetGroupDecr}>Groupe -</button>
-        <button onClick={handlerSetGroupInc}>Groupe +</button>
-      </div>
       <WordsPagination/>
     </div>
   );
+
 }
 export default Schoolbook;

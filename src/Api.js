@@ -4,12 +4,11 @@ const words = `${base}/words`;
 const users = `${base}/users`;
 const signIn = `${base}/signin`;
 
-export const getWords = async (group, page) => {
+export const getWords = async (group, page=0) => {
 	const response =  await fetch(`${words}?group=${group}&page=${page}`);
 	return {
 		items: await response.json()
 	};
-
 };
 export const createUser = async (user) => {
 	const rawResponse = await fetch(users, {
@@ -24,8 +23,6 @@ export const createUser = async (user) => {
 	localStorage.setItem('name', JSON.stringify(content.name))	
 	localStorage.setItem('email', JSON.stringify(content.email))	
 	localStorage.setItem('user', JSON.stringify(content.email))	
-
-
 };
 export const loginUser = async (user )=> {
   const rawResponse = await fetch(signIn, {

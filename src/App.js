@@ -17,21 +17,21 @@ import Menu from './components/Menu';
 import Auth from './components/Auth';
 
 function App() {
+  const pageFromLocal = JSON.parse(localStorage.getItem('page'));
   const [words, setWords] = useState([]);
   const [groups, setGroups] = useState(1);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [loginValues, setLoginValues] = useState('');
-  const [registrValues, setRegistrValues] = useState('');
-  const [pagePagination, setPagePagination] = React.useState(1);
+  const [setLoginValues] = useState('');
+  const [setRegistrValues] = useState('');
+  const [pagePagination, setPagePagination] = useState(pageFromLocal);
 
   const getWordsHandle = () => {
-    getWords(groups,1).then(resp => 
+    getWords(groups,pagePagination).then(resp => 
       setWords(resp.items)
-      )
+    )
   };
-
   const handlerSetGroupInc = () => { 
     if (groups < 5 ){
       setGroups(groups + 1)
@@ -151,7 +151,7 @@ function App() {
      setCountD(countD - 1);
     }
   }; 
-  const handleChange = (event, value) => {
+  const handleChangePagePagination = (event, value) => {
     setPagePagination(value);
   };
   return (
@@ -189,7 +189,8 @@ function App() {
         inecreaseD,
         decreaseD,
         pagePagination,
-        handleChange
+        handleChangePagePagination,
+        setPagePagination
       }}>
        <Header/> 
        <Routes>

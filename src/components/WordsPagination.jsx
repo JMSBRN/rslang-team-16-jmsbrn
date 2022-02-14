@@ -6,7 +6,7 @@ import '../components/wordsPagination.css';
 import { Context } from "../Context";
 
 function WordsPagination() {
- const {pagePagination, handleChange } = useContext(Context);
+ const {pagePagination, handleChangePagePagination } = useContext(Context);
   return (
     <Stack spacing={2}>
       <Typography>Page: {pagePagination}</Typography>
@@ -15,7 +15,7 @@ function WordsPagination() {
         page={pagePagination}
         shape="rounded"
         showFirstButton showLastButton
-        onChange={handleChange}
+        onChange={handleChangePagePagination}
        />
     </Stack>
   );
