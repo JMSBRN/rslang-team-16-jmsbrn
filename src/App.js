@@ -1,12 +1,12 @@
 import MainCenter from './components/main/mainJs';
 import HeaderSprint from './components/header/header';
-import Button from './elements/button/button-sprint';
+import ButtonSprint from './elements/button/button-sprint';
 import { getWords } from './constants/requests';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 
 import './App.css';
 
-
+// const SprintIndexContext = React.createContext();
 
 function App() {
 
@@ -18,40 +18,53 @@ function App() {
  
   const [groups, setgroups] = useState(1);
   const [words, setWords] = useState([]);
-  let [word, setWord] = useState()
+  const [word, setWord] = useState();
+  const [wordRandom, setWordRandom] = useState();
+  const [sprintIndex, setSprintIndex] = useState(4)
+  
   const start = () => {
     getWords(groups, 1).then(resp => 
        setWords(resp)
         )
   }
   
-
-  
    useEffect(() => {
-     let i = 0;
-    const interval = setInterval(() => {
-     if (i===words.length) {
-       return
-     }    
-      console.log(words[i]);
+    let i = 0;
+    
+    let indexSpeedSprint = 4;
+    // console.log(indexSpeedSprint)
+
+    let timerId = setTimeout(function tick() {
+      console.log(indexSpeedSprint)
+      if (i >= words.length) {
+        sessionStorage.removeItem('indexSpeedSprint');
+        return
+      } 
+      const randomIndex = Math.floor(Math.random() * 2) + i;
+      sessionStorage.setItem('indexWord', `${i}`);
+      sessionStorage.setItem('randomIndex', `${randomIndex}`);      
       setWord(words[i]);
+      setWordRandom(words[randomIndex]);
       i++;
-    }, 2000);
-    return () => clearInterval(interval);
+      indexSpeedSprint = sessionStorage.getItem('indexSpeedSprint');
+      if (!indexSpeedSprint) indexSpeedSprint = 4;
+      timerId = setTimeout(tick, indexSpeedSprint*500); 
+    }, indexSpeedSprint*500);
   }, [words]);
 
-  // useEffect(() => {
-  //   console.log('hello')
-  // }, [words])
+  
 
   return (
     <div className="App">
-      <HeaderSprint />
-      <Button name={'start-sprint'} text={'Start'} click={start}/>
+      
+       <HeaderSprint />
+      <ButtonSprint name={'start-sprint'} text={'Start'} click={start}/>
       <MainCenter
-      myWord={word ? word.word : null} 
+      myWord={wordRandom ? wordRandom.word : null} 
       myWordTranslate={word ? word.wordTranslate : null}
-      />
+      /> 
+      
+    
     </div>
   );
 }

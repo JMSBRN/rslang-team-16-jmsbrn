@@ -22,7 +22,11 @@
 .done-sprint {
   height: 7vh;
   width: 7vh;
-  background-color:aqua
+  background-color:cornflowerblue;
+  display: none;
+}
+.active{
+  display: block;
 }
 
 .buttons-sprint {

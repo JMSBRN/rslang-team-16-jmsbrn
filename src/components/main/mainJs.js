@@ -1,8 +1,6 @@
 import './mainCss.css';
 import React, { useState, useContext, useEffect } from 'react';
 import TableQuest from '../table-questions/tableQuest';
-import Button from '../../elements/button/button-sprint';
-import { start } from '../../constants/requests';
 
 
 const MainCenter = (props) => {
