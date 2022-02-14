@@ -9,6 +9,7 @@ export const getWords = async (group, page) => {
 	return {
 		items: await response.json()
 	};
+
 };
 export const createUser = async (user) => {
 	const rawResponse = await fetch(users, {

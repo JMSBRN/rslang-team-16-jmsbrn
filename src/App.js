@@ -24,12 +24,14 @@ function App() {
   const [password, setPassword] = useState('');
   const [loginValues, setLoginValues] = useState('');
   const [registrValues, setRegistrValues] = useState('');
+  const [pagePagination, setPagePagination] = React.useState(1);
 
-  const handlerGetWords = () => {
+  const getWordsHandle = () => {
     getWords(groups,1).then(resp => 
       setWords(resp.items)
       )
   };
+
   const handlerSetGroupInc = () => { 
     if (groups < 5 ){
       setGroups(groups + 1)
@@ -148,13 +150,16 @@ function App() {
     if(countD > 0){
      setCountD(countD - 1);
     }
+  }; 
+  const handleChange = (event, value) => {
+    setPagePagination(value);
   };
   return (
     <div className="app">
       <Context.Provider value={{
-        handlerGetWords,
         handlerSetGroupInc,
         handlerSetGroupDecr,
+        getWordsHandle,
         groups,
         words,
         closeMenu,
@@ -183,6 +188,8 @@ function App() {
         decreaseC,
         inecreaseD,
         decreaseD,
+        pagePagination,
+        handleChange
       }}>
        <Header/> 
        <Routes>

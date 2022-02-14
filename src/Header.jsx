@@ -4,6 +4,8 @@ import { Context } from './Context';
 
 const Header = () => {
  const {openMenu, openLogin, clearLocalStorage} = useContext(Context);
+
+
 	return (
 	 <div className='header'>
 			 <ul className='header-nv-btns'>

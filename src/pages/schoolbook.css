@@ -1,5 +1,56 @@
 .schoolbook {
-	background-color: rgb(45, 199, 65);
-  color: rgb(255, 255, 255);
+	height: 600px;
+	background-color: rgb(209, 226, 211);
+  color: rgb(122, 117, 117);
 	font-size: 20px;
 }
+.schoolbook-stages {
+	  display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.stage {
+	width:70px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+  justify-content: center;
+	border: none;
+	border-radius: 5px;
+	background-color: #153b9b;
+	color: rgb(233, 233, 233);
+	cursor: pointer;
+}
+.words {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+.word-card {
+	position: relative;
+	width: 80px;
+	height: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	padding: 1rem 0 0 1rem;
+	background-color: #f3f4f8;
+	border-radius: 5px;
+	border: none;
+	overflow: hidden;
+}
+.word-card:hover {
+	cursor: pointer;
+ }
+.word {
+	font-size: 1.3rem;
+	margin-bottom: 0;
+	color: #806ece;
+	font-size: 14px;
+ }
+.word-translate {
+	font-size: 1rem;
+	color: #2d992a;
+	font-size: 10px;
+	text-align: left;
+ }
