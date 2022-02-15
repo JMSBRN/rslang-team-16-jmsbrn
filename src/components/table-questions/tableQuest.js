@@ -2,16 +2,18 @@ import './tableQuest.css';
 import Done from '../../elements/don-svg/done';
 import ButtonSprint from '../../elements/button/button-sprint';
 import BackPackArray from '../BackPackArray';
-import React, {useState, useEffect} from 'react'
+import React, {useState } from 'react';
+import { closure, badAnswers, calcSprint } from '../../constants/constants';
 
 
 
-const TableQuest = () => {
-  
+const TableQuest = () => {  
   let [doneClassName, setDoneClassName] = useState('done-sprint');
   let [doneColor, setDoneColor] = useState('red'); 
-
-  const clickYes = () => {    
+ 
+  const clickYes = () => { 
+    sessionStorage.setItem('disabledYes', true);   
+    sessionStorage.setItem('disabledNo', true);   
     doneClassName = 'done-sprint active';
     setDoneClassName(doneClassName)
     setTimeout(() => {
@@ -21,29 +23,20 @@ const TableQuest = () => {
     const randomIndex = sessionStorage.getItem('randomIndex');
     if (indexWord === randomIndex) { 
       setDoneColor('green');
+      calcSprint();
       closure();
     }else {
       setDoneColor('red');
+      badAnswers();
     }
+    console.log(disabledYes)
   }
-  
-  const closure = () => {
-    let speedIndex = +sessionStorage.getItem('speedIndex');
-    speedIndex ? speedIndex++ : (speedIndex = 1);
-    let indexSpeedSprint = +sessionStorage.getItem('indexSpeedSprint');
-    if (!indexSpeedSprint) indexSpeedSprint = 4;
-    // console.log(indexSpeedSprint)
-    if (speedIndex > 3) {
-      if (indexSpeedSprint > 1) indexSpeedSprint--;
-      speedIndex = 0;
-    } 
-    sessionStorage.setItem('indexSpeedSprint', indexSpeedSprint)
-    sessionStorage.setItem('speedIndex', speedIndex);
-    // sessionStorage.removeItem('speedIndex');
-  };
-  
+    
   const clickNo = () => {
-  doneClassName = 'done-sprint active';
+
+    sessionStorage.setItem('disabledYes', true) 
+    sessionStorage.setItem('disabledNo', true) 
+    doneClassName = 'done-sprint active';
     setDoneClassName(doneClassName)
     setTimeout(() => {
       setDoneClassName('done-sprint') 
@@ -52,13 +45,18 @@ const TableQuest = () => {
     const randomIndex = sessionStorage.getItem('randomIndex');
     if (indexWord === randomIndex) { 
       setDoneColor('red');
+      badAnswers();
     }else {
       setDoneColor('green');
+      calcSprint();
       closure();
     }
   }
+
   let indexSpeedSprint = sessionStorage.getItem('indexSpeedSprint');
-  // console.log(indexSpeedSprint);
+  let disabledYes = Boolean(sessionStorage.getItem('disabledYes'));
+  let disabledNo = Boolean(sessionStorage.getItem('disabledNo'));
+
   return (
     <div className='table-quest'>
       <div className='back-packs'>
@@ -70,8 +68,9 @@ const TableQuest = () => {
         <Done doneColor={doneColor} />
       </div>
       <div className='buttons-sprint'>
-        <ButtonSprint name={'yes'} text={'Yes'} click={clickYes} />        
-        <ButtonSprint name={'no'} text={'No'} click={clickNo} />
+        <ButtonSprint name={'yes'} text={'Yes'} click={clickYes} disabled={!disabledYes ? disabledYes = false : disabledYes}/>        
+        <ButtonSprint name={'no'} text={'No'} click={clickNo} 
+        disabled={!disabledNo ? disabledNo = false : disabledNo}/>
       </div>
     </div>
   )

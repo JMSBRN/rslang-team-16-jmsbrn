@@ -35,11 +35,14 @@ function App() {
     // console.log(indexSpeedSprint)
 
     let timerId = setTimeout(function tick() {
-      console.log(indexSpeedSprint)
       if (i >= words.length) {
         sessionStorage.removeItem('indexSpeedSprint');
+        sessionStorage.removeItem('indexBubble');
+        sessionStorage.removeItem('calcIndex');
         return
       } 
+      sessionStorage.removeItem('disabledYes');
+      sessionStorage.removeItem('disabledNo');
       const randomIndex = Math.floor(Math.random() * 2) + i;
       sessionStorage.setItem('indexWord', `${i}`);
       sessionStorage.setItem('randomIndex', `${randomIndex}`);      
@@ -48,22 +51,19 @@ function App() {
       i++;
       indexSpeedSprint = sessionStorage.getItem('indexSpeedSprint');
       if (!indexSpeedSprint) indexSpeedSprint = 4;
-      timerId = setTimeout(tick, indexSpeedSprint*500); 
-    }, indexSpeedSprint*500);
+      timerId = setTimeout(tick, indexSpeedSprint*700); 
+    }, indexSpeedSprint*700);
   }, [words]);
-
-  
 
   return (
     <div className="App">
       
-       <HeaderSprint />
+      <HeaderSprint />
       <ButtonSprint name={'start-sprint'} text={'Start'} click={start}/>
       <MainCenter
       myWord={wordRandom ? wordRandom.word : null} 
       myWordTranslate={word ? word.wordTranslate : null}
-      /> 
-      
+      />  
     
     </div>
   );

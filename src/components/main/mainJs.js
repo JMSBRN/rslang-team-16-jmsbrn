@@ -5,7 +5,6 @@ import TableQuest from '../table-questions/tableQuest';
 
 const MainCenter = (props) => {
   
-  // console.log(word)
   return (
     <div className='main-sprint'>
       {/* <Button name={'start-sprint'} text={'Start'} click={start}/> */}

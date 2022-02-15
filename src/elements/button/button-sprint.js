@@ -1,7 +1,7 @@
-const ButtonSprint = ({click, name, text}) => {
+const ButtonSprint = (props) => {
 return (
   <>
-  <button onClick={click} className={name}>{text}</button>
+  <button onClick={props.click} className={props.name} disabled={props.disabled}>{props.text}</button>
   </>
 )
 };
