@@ -23,8 +23,8 @@ function App() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [setLoginValues] = useState('');
-  const [setRegistrValues] = useState('');
+  const [loginValues,setLoginValues] = useState('');
+  const [registrValues, setRegistrValues] = useState('');
   const [pagePagination, setPagePagination] = useState(pageFromLocal);
   const stages = [1,2,3,4,5,6];
   const [group, setGroup] = useState(0);
@@ -84,22 +84,23 @@ function App() {
     setPassword(e.target.value);
   };
 	const getLoginValues = (e) => {
-    e.preventDefault();
+     e.preventDefault();
     const user = {
       email: `${email}`,
       password: `${password}`
-     };
+     }
      setLoginValues(email, password);
      loginUser(user) ;
 	};
 	const getRegistrValues = (e) => {
-    e.preventDefault();
+     e.preventDefault();
     const user = {
       name: `${name}`,
       email: `${email}`,
       password: `${password}`
-     };
-     setRegistrValues(name, email, password);
+     }
+
+    setRegistrValues(name, email, password);
      createUser(user);
 	};
   const clearLocalStorage = () => {
