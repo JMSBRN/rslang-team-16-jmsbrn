@@ -4,25 +4,23 @@ import WordsPagination from "../components/WordsPagination";
 import { Context } from "../Context";
 
 function Schoolbook() {
-  const { getWordsHandle, words, pagePagination} = useContext(Context);
-  if(pagePagination !== null){
+  const { getWordsHandle, words, pagePagination, setStageNumToLocal, stages, group} = useContext(Context);
+  if(pagePagination !== null ){
     localStorage.setItem('page', JSON.stringify(pagePagination));
   }else {
     localStorage.setItem('page', JSON.stringify(0));
+    localStorage.setItem('group', JSON.stringify(0));
     window.location.reload();
   };
   useEffect(() => {
-  getWordsHandle();
-  },[pagePagination]);
+    getWordsHandle();
+  },[pagePagination, group]);
   return (
     <div className="schoolbook">
       <div className="schoolbook-stages">
-         <div className="stage">stage1</div>
-         <div className="stage">stage2</div>
-         <div className="stage">stage3</div>
-         <div className="stage">stage4</div>
-         <div className="stage">stage5</div>
-         <div className="stage">stage6</div>
+        {stages.map(stage =>
+           <div key={stage} onClick={setStageNumToLocal} data-num={stage-1} className="stage">{`stage ${stage}`}</div>
+          )}
       </div>
       <div className="words-title">Words</div>
       <div className="words">
@@ -38,6 +36,5 @@ function Schoolbook() {
       <WordsPagination/>
     </div>
   );
-
 }
 export default Schoolbook;

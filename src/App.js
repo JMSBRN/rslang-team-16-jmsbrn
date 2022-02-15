@@ -18,33 +18,24 @@ import Auth from './components/Auth';
 
 function App() {
   const pageFromLocal = JSON.parse(localStorage.getItem('page'));
+  const groupFromLocal = JSON.parse(localStorage.getItem('group'));
   const [words, setWords] = useState([]);
-  const [groups, setGroups] = useState(1);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [setLoginValues] = useState('');
   const [setRegistrValues] = useState('');
   const [pagePagination, setPagePagination] = useState(pageFromLocal);
-
+  const stages = [1,2,3,4,5,6];
+  const [group, setGroup] = useState(0);
+  const setStageNumToLocal = (e)=> {
+    setGroup(e.target.dataset.num)
+    localStorage.setItem('group', JSON.stringify(e.target.dataset.num));
+  };
   const getWordsHandle = () => {
-    getWords(groups,pagePagination).then(resp => 
+    getWords(groupFromLocal,pagePagination).then(resp => 
       setWords(resp.items)
     )
-  };
-  const handlerSetGroupInc = () => { 
-    if (groups < 5 ){
-      setGroups(groups + 1)
-    }else {
-      setGroups(groups - 0)
-    }
-  };
-  const handlerSetGroupDecr = () => {
-    if (groups > 1 ){
-      setGroups(groups - 1)
-    }else {
-      setGroups(groups + 0)
-    }
   };
   const closeMenu = () => {
     setTimeout(() => {
@@ -157,10 +148,8 @@ function App() {
   return (
     <div className="app">
       <Context.Provider value={{
-        handlerSetGroupInc,
-        handlerSetGroupDecr,
         getWordsHandle,
-        groups,
+        group,
         words,
         closeMenu,
         openMenu,
@@ -190,7 +179,9 @@ function App() {
         decreaseD,
         pagePagination,
         handleChangePagePagination,
-        setPagePagination
+        setPagePagination,
+        setStageNumToLocal,
+        stages
       }}>
        <Header/> 
        <Routes>
