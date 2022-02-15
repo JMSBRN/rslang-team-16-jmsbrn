@@ -152,7 +152,7 @@ function App() {
     }
   }; 
   const handleChangePagePagination = (event, value) => {
-    setPagePagination(value);
+    setPagePagination(value - 1);
   };
   return (
     <div className="app">

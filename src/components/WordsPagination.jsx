@@ -9,7 +9,7 @@ function WordsPagination() {
  const {pagePagination, handleChangePagePagination } = useContext(Context);
   return (
     <Stack spacing={2}>
-      <Typography>Page: {pagePagination}</Typography>
+      <Typography>Page: {pagePagination + 1}</Typography>
       <Pagination 
         count={30}
         page={pagePagination}
