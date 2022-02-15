@@ -28,6 +28,7 @@ function App() {
   const [pagePagination, setPagePagination] = useState(pageFromLocal);
   const stages = [1,2,3,4,5,6];
   const [group, setGroup] = useState(0);
+  const [wordSchoolbook, setWordSchoolbook] = useState('')
   const setStageNumToLocal = (e)=> {
     setGroup(e.target.dataset.num)
     localStorage.setItem('group', JSON.stringify(e.target.dataset.num));
@@ -145,6 +146,9 @@ function App() {
   const handleChangePagePagination = (event, value) => {
     setPagePagination(value - 1);
   };
+  const getWordValue = (e) => {
+    setWordSchoolbook(e.target.dataset.word);
+     };
   return (
     <div className="app">
       <Context.Provider value={{
@@ -181,7 +185,9 @@ function App() {
         handleChangePagePagination,
         setPagePagination,
         setStageNumToLocal,
-        stages
+        stages,
+        getWordValue,
+        wordSchoolbook
       }}>
        <Header/> 
        <Routes>

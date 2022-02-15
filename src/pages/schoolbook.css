@@ -17,14 +17,25 @@
   justify-content: center;
 	border: none;
 	border-radius: 5px;
-	background-color: #153b9b;
+	background-color: #6182d4;
 	color: rgb(233, 233, 233);
 	cursor: pointer;
+}
+.stage:hover {
+   font-size: 23px;
+	 color: rgb(238, 132, 132);
+	 transition: all ease 0.3s;
+}
+.words-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
 }
 .words {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.5rem;
+	width: 50%;
 }
 .word-card {
 	position: relative;
@@ -44,7 +55,7 @@
  }
 .word {
 	font-size: 1.3rem;
-	margin-bottom: 0;
+	margin-bottom: 10px;
 	color: #806ece;
 	font-size: 14px;
  }
@@ -54,3 +65,4 @@
 	font-size: 10px;
 	text-align: left;
  }
+

@@ -1,10 +1,11 @@
 
 import React, {useEffect, useContext } from "react";
 import WordsPagination from "../components/WordsPagination";
+import WordView from "../components/WordView";
 import { Context } from "../Context";
 
 function Schoolbook() {
-  const { getWordsHandle, words, pagePagination, setStageNumToLocal, stages, group} = useContext(Context);
+  const { getWordsHandle, words, pagePagination, setStageNumToLocal, stages, group, getWordValue} = useContext(Context);
   if(pagePagination !== null ){
     localStorage.setItem('page', JSON.stringify(pagePagination));
   }else {
@@ -15,6 +16,8 @@ function Schoolbook() {
   useEffect(() => {
     getWordsHandle();
   },[pagePagination, group]);
+
+ 
   return (
     <div className="schoolbook">
       <div className="schoolbook-stages">
@@ -23,15 +26,18 @@ function Schoolbook() {
           )}
       </div>
       <div className="words-title">Words</div>
-      <div className="words">
-        {words.map((word) => (
-          <div key={word.word} className="word-card">
-            <div className="word">
-              {word.word}
-              <div className="word-translate">{word.wordTranslate}</div>
+      <div className="words-container">
+        <div className="words">
+          {words.map((word) => (
+            <div onClick={getWordValue} data-word={word.word} key={word.word} className="word-card">
+              <div className="word">
+                {word.word}
+                <div className="word-translate">{word.wordTranslate}</div>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        <WordView/>
       </div>
       <WordsPagination/>
     </div>
