@@ -32,3 +32,5 @@
     localStorage.setItem('resultSprint', resultSprint); 
     sessionStorage.setItem('calcIndex', calcIndex);
   }
+
+  

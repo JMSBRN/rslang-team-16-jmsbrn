@@ -2,14 +2,23 @@ import './tableQuest.css';
 import Done from '../../elements/don-svg/done';
 import ButtonSprint from '../../elements/button/button-sprint';
 import BackPackArray from '../BackPackArray';
+import urlYes from '../../assets/mp3/yes.mp3';
 import React, {useState } from 'react';
-import { closure, badAnswers, calcSprint } from '../../constants/constants';
+import urlNo from '../../assets/mp3/no.mp3';
+import { closure, badAnswers, calcSprint, keyboardSprint } from '../../constants/constants';
 
 
 
 const TableQuest = () => {  
   let [doneClassName, setDoneClassName] = useState('done-sprint');
-  let [doneColor, setDoneColor] = useState('red'); 
+  let [doneColor, setDoneColor] = useState('red');
+  
+  const [audioSprintNo] = useState(new Audio(urlNo));
+  const [audioSprintYes] = useState(new Audio(urlYes));
+  
+  const soundSprint = (yesNo) => {
+    (yesNo === 'yes') ? audioSprintYes.play() : audioSprintNo.play();   
+  }
  
   const clickYes = () => { 
     sessionStorage.setItem('disabledYes', true);   
@@ -23,15 +32,24 @@ const TableQuest = () => {
     const randomIndex = sessionStorage.getItem('randomIndex');
     if (indexWord === randomIndex) { 
       setDoneColor('green');
+      soundSprint('yes');
       calcSprint();
       closure();
     }else {
       setDoneColor('red');
       badAnswers();
+      soundSprint('no')
     }
-    console.log(disabledYes)
   }
-    
+  
+    document.addEventListener('keydown', (e) => {
+      if (e.key === '4' ) {
+        clickYes()
+      }else if(e.key === '6') {
+        clickNo()
+      }
+    })
+
   const clickNo = () => {
 
     sessionStorage.setItem('disabledYes', true) 
@@ -46,8 +64,10 @@ const TableQuest = () => {
     if (indexWord === randomIndex) { 
       setDoneColor('red');
       badAnswers();
+      soundSprint('no')
     }else {
       setDoneColor('green');
+      soundSprint('yes');
       calcSprint();
       closure();
     }
@@ -56,6 +76,9 @@ const TableQuest = () => {
   let indexSpeedSprint = sessionStorage.getItem('indexSpeedSprint');
   let disabledYes = Boolean(sessionStorage.getItem('disabledYes'));
   let disabledNo = Boolean(sessionStorage.getItem('disabledNo'));
+
+
+  
 
   return (
     <div className='table-quest'>

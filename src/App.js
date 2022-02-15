@@ -27,12 +27,12 @@ function App() {
        setWords(resp)
         )
   }
+
+ 
   
    useEffect(() => {
-    let i = 0;
-    
+    let i = 0;  
     let indexSpeedSprint = 4;
-    // console.log(indexSpeedSprint)
 
     let timerId = setTimeout(function tick() {
       if (i >= words.length) {

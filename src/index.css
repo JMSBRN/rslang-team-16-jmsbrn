@@ -1,5 +1,9 @@
+* {
+  margin: 0;
+}
+
 body {
-  height: 100vh;
+  height: 100vh;;
   background: url(./assets/picture/hero-banner.jpg) no-repeat;
   background-size: 100%;
   margin: 0;
