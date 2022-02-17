@@ -28,6 +28,11 @@
 	 color: rgb(238, 132, 132);
 	 transition: all ease 0.3s;
 }
+.stage-title {
+	text-align: center;
+	font-size: 25px;
+	color: rgb(107, 102, 102);
+}
 .words-sratage-container {
 	display: flex;
 	gap: 135px;
@@ -52,6 +57,7 @@
 	justify-content: space-around;
 	padding: 7px;
 	background-color: #f3f4f8;
+	color: rgb(52, 67, 202);
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
@@ -61,7 +67,6 @@
 .word-card:hover {
    color: rgb(253, 0, 0);
  }
-
 .word-card:focus {
 	position: relative;
 	width: 180px;

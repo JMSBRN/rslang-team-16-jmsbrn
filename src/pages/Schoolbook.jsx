@@ -5,6 +5,7 @@ import WordView from "../components/WordView";
 import { Context } from "../Context";
 
 function Schoolbook() {
+ 
   const { getWordsHandle, words, pagePagination, setStageNumToLocal, stages, group, getWordValue} = useContext(Context);
   if(pagePagination !== null ){
     localStorage.setItem('page', JSON.stringify(pagePagination));
@@ -17,6 +18,7 @@ function Schoolbook() {
     getWordsHandle();
   },[pagePagination, group]);
 
+ 
   return (
     <div className="schoolbook">
       <div className="schoolbook-stages">
@@ -24,7 +26,7 @@ function Schoolbook() {
            <button key={stage} onClick={setStageNumToLocal} data-num={stage-1} className="stage">{`stage ${stage}`}</button>
           )}
       </div>
-        <div className="words-title">Words</div>
+        <div className="stage-title">Stage  {((group)/1)+1}</div>
       <div className="words-container">
         <div className="words">
           {words.map((word) => (
