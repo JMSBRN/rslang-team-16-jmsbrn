@@ -6,8 +6,8 @@ function Menu() {
   const {closeMenu} = useContext(Context)
 	return (
   	<div id='menu' className="menu-hide">
-			<div className='menu-nav-links'>
-				<button onClick={closeMenu} className='menu-btn-close'>close</button>
+			<button onClick={closeMenu} className='menu-btn-close'></button>
+			<div className='menu-nav-links'>	
 				<Link className='menu-link' to={'/'}>Home</Link>
 				<Link className='menu-link' to={'games'}>Games</Link>
 				<Link className='menu-link' to={'about'}>About</Link>
