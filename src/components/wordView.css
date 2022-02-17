@@ -1,9 +1,35 @@
 
- .word-view {
-	width: 30%;
-	height: 300px;
+.word-view {
+	width: 300px;
+	height: 600px;
+	border-radius: 5px;
 	font-size: 14px;
-	background-color: #806ece;
+	background-color: #a498db;
 	color: white;
 }
-
+.word-card-view {
+	padding: 10px;
+	font-size: 16px;
+}
+.word-card-view img {
+	width: 280px;
+	height: 200px;
+	border-radius: 5px;
+	background-color: transparent;
+}
+.word-view-word {
+	padding: 0;
+	margin: 0;
+	font-size: 30px;
+}
+.word-view-word-translate {
+  font-size: 20px;
+}
+.word-view-btn {
+	margin: 5px;
+	border: none;
+	border-radius: 5px;
+	background-color: rgb(58, 184, 184);
+	color: white;
+	cursor: pointer;
+}

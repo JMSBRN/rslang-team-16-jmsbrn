@@ -1,16 +1,18 @@
 .schoolbook {
-	height: 600px;
+	height: 800px;
 	background-color: rgb(209, 226, 211);
   color: rgb(122, 117, 117);
 	font-size: 20px;
 }
 .schoolbook-stages {
+    margin: 5px;
 	  display: flex;
     flex-direction: row;
     gap: 10px;
 }
 .stage {
-	width:70px;
+	margin-top: 10px;
+	width:80px;
 	height: 30px;
 	display: flex;
 	align-items: center;
@@ -22,9 +24,12 @@
 	cursor: pointer;
 }
 .stage:hover {
-   font-size: 23px;
 	 color: rgb(238, 132, 132);
 	 transition: all ease 0.3s;
+}
+.words-sratage-container {
+	display: flex;
+	gap: 135px;
 }
 .words-container {
 	display: flex;
@@ -39,30 +44,46 @@
 }
 .word-card {
 	position: relative;
-	width: 80px;
-	height: 30px;
+	width: 180px;
+	height: 50px;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
-	padding: 1rem 0 0 1rem;
+	justify-content: space-around;
+	padding: 7px;
 	background-color: #f3f4f8;
-	border-radius: 5px;
 	border: none;
-	overflow: hidden;
-}
-.word-card:hover {
+	border-radius: 5px;
 	cursor: pointer;
+	transition: all ease 0.4s;
+}
+
+.word-card:hover {
+	letter-spacing: 0.7px;
+   color: rgb(253, 0, 0);
  }
+
+.word-card:focus {
+	position: relative;
+	width: 180px;
+	height: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 7px;
+	background-color: #7188e4;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all ease 0.4s;
+ }
+
 .word {
-	font-size: 1.3rem;
 	margin-bottom: 10px;
-	color: #806ece;
-	font-size: 14px;
+	font-size: 22px;
  }
+
 .word-translate {
-	font-size: 1rem;
-	color: #2d992a;
-	font-size: 10px;
+	font-size: 12px;
 	text-align: left;
  }
 

@@ -1,4 +1,7 @@
 .header {
+	position: relative;
+	top: 0;
+	height: 60px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -19,7 +22,7 @@
 	color: rgb(168, 164, 164);
 }
 .header-nav-btn {
-	font-size: 10px;
+	font-size: 14px;
 	border: none;
 }
 .header-nav-btn a {
@@ -28,7 +31,7 @@
 .out-btn,
 .login-btn,
 .menu-btn  {
-	font-size: 10px;
+	font-size: 14px;
 	border: none;
 }
 .login-btn :hover,
