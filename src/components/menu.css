@@ -5,9 +5,16 @@
 	width: 200px;
 	height: 100%;
 	background-color: rgb(134, 223, 148);
+	transition: 0.3s;
 }
 .menu-hide {
-	visibility: hidden;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 100%;
+	background-color: rgb(134, 223, 148);
+	transition: 0.3s;
 }
 .menu-btn-close {
 	width: 30px;
