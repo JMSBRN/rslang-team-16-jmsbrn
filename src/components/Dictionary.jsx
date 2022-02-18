@@ -3,6 +3,7 @@ import { Context } from '../Context';
 import WordView from './WordView'
 
 function Dictionary() {
+
 const {
 	stages,
 	setStageNumToLocal,
@@ -15,6 +16,20 @@ useEffect(() => {
 	getWordsHandle();
 }, [group]);
 
+const wordsToLearnFromLocal = JSON.parse(localStorage.getItem('wordToLearn'));
+
+const newArr = words.filter((word) => {
+		return word.word === wordsToLearnFromLocal[0] 
+		|| word.word === wordsToLearnFromLocal[1]
+		|| word.word === wordsToLearnFromLocal[2]
+		|| word.word === wordsToLearnFromLocal[3]
+		|| word.word === wordsToLearnFromLocal[4]
+		|| word.word === wordsToLearnFromLocal[5]
+		|| word.word === wordsToLearnFromLocal[6]
+		|| word.word === wordsToLearnFromLocal[7]
+		|| word.word === wordsToLearnFromLocal[8]
+		|| word.word === wordsToLearnFromLocal[9]; 
+	});
 return (
 	<div className="schoolbook">
 		<div className="schoolbook-stages">
@@ -31,7 +46,7 @@ return (
 		<div className="dificlt-words">Difficult words</div>
 		<div className="words-container">
 			<div className="words">
-				{words.map((word) => (
+				{newArr.map((word) => (
 					<button
 						id="word-card"
 						className="word-card"

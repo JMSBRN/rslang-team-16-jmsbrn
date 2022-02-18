@@ -24,7 +24,13 @@ function Schoolbook() {
   useEffect(() => {
     getWordsHandle();
   }, [pagePagination, group]);
-
+  const newArr = JSON.parse(localStorage.getItem('wordToLearn'));
+  const setWordTolearnToLocal = (word) => {
+    if(!newArr.includes(word)){
+      newArr.push(word);
+      localStorage.setItem('wordToLearn',JSON.stringify(newArr))
+    }
+  };
   return (
     <div className="schoolbook">
       <div className="schoolbook-stages">
@@ -67,6 +73,8 @@ function Schoolbook() {
                   {word.wordTranslate}
                 </div>
               </div>
+              {localStorage.getItem('id')? 
+              <div onClick={() => setWordTolearnToLocal(word.word)} className="put-in-ndictionary-btn">difficult</div>: ''}
             </button>
           ))}
         </div>

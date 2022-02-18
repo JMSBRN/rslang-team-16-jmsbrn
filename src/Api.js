@@ -38,5 +38,6 @@ export const loginUser = async (user )=> {
 	localStorage.setItem('name', JSON.stringify(content.name))
   localStorage.setItem('refreshToken', JSON.stringify(content.refreshToken))
 	localStorage.setItem('id', JSON.stringify(content.userId))
+	localStorage.setItem('wordToLearn', JSON.stringify([]))
 };
 
