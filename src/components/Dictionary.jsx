@@ -17,7 +17,6 @@ useEffect(() => {
 }, [group]);
 
 const wordsToLearnFromLocal = JSON.parse(localStorage.getItem('wordToLearn'));
-
 const newArr = words.filter((word) => {
 		return word.word === wordsToLearnFromLocal[0] 
 		|| word.word === wordsToLearnFromLocal[1]

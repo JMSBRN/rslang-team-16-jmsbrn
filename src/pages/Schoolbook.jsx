@@ -25,12 +25,16 @@ function Schoolbook() {
     getWordsHandle();
   }, [pagePagination, group]);
   const newArr = JSON.parse(localStorage.getItem('wordToLearn'));
-  const setWordTolearnToLocal = (word) => {
+  const setWordTolearnToLocal = (e,word) => {
     if(!newArr.includes(word)){
       newArr.push(word);
-      localStorage.setItem('wordToLearn',JSON.stringify(newArr))
+      localStorage.setItem('wordToLearn',JSON.stringify(newArr));
     }
+    console.log(e.target.classList.toggle('done'));
   };
+   const toggleClassDone = (e) => {
+     e.target.classList.toggle('done');
+   };
   return (
     <div className="schoolbook">
       <div className="schoolbook-stages">
@@ -47,7 +51,7 @@ function Schoolbook() {
          <NavLink
           to={'dictionary'}
           >Dictionary</NavLink>
-       </button>: " "}
+       </button>: ''}
       </div>
       <div className="stage-title">Stage {group / 1 + 1}</div>
       <div className="words-container">
@@ -60,6 +64,16 @@ function Schoolbook() {
               data-word={word.word}
               key={word.word}
             >
+              {
+                localStorage.getItem('id')? 
+                <div 
+                onClick={toggleClassDone}
+                data-done={word.word}
+                className="studied-word-btn"
+                >
+                studied
+                </div>:''
+               }
               <div
                 onClick={getWordValue}
                 data-word={word.word}
@@ -73,8 +87,14 @@ function Schoolbook() {
                   {word.wordTranslate}
                 </div>
               </div>
-              {localStorage.getItem('id')? 
-              <div onClick={() => setWordTolearnToLocal(word.word)} className="put-in-ndictionary-btn">difficult</div>: ''}
+              {
+                localStorage.getItem('id')? 
+                <div onClick={(e) => setWordTolearnToLocal(e,word.word)}
+                className="put-in-dictionary-btn"
+                >
+                difficult
+                </div>: ''
+               }
             </button>
           ))}
         </div>
