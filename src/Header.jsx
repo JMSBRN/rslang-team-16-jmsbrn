@@ -30,7 +30,6 @@ const Header = () => {
         </button>
         <Button
           id="fade-button"
-					className={({ isActive }) => (isActive ? "active-link" : "")}
           aria-controls={open ? "fade-menu" : undefined}
           aria-haspopup="true"
           aria-expanded={open ? "true" : undefined}

@@ -17,6 +17,7 @@ import Menu from './components/Menu';
 import Auth from './components/Auth';
 import Sprint from './components/Sprint';
 import AudioCall from './components/AudioCall';
+import Dictionary from './components/Dictionary';
 
 function App() {
   const pageFromLocal = JSON.parse(localStorage.getItem('page'));
@@ -93,7 +94,7 @@ function App() {
       password: `${password}`
      }
      setLoginValues(email, password);
-     loginUser(user) ;
+     loginUser(user);
 	};
 	const getRegistrValues = (e) => {
      e.preventDefault();
@@ -201,6 +202,7 @@ function App() {
             <Route path='sprint' element={<Sprint/>}/>
             <Route path='audioCall' element={<AudioCall/>}/>
             <Route path='schoolbook' element={<Schoolbook/>}/>
+            <Route path='schoolbook/dictionary' element={<Dictionary/>}/>
             <Route path='statistics' element={<Statistics/>}/>
             <Route path='about' element={<About/>}/>
             <Route path='*' element={<NoPage/>}/>
