@@ -26,8 +26,7 @@
 
   export const calcSprint = () => {
     let calcIndex = sessionStorage.getItem('calcIndex');
-    calcIndex ? calcIndex++ : calcIndex = 1;
-    
+    calcIndex ? calcIndex++ : calcIndex = 1;    
     const resultSprint = calcIndex * 80;
     localStorage.setItem('resultSprint', resultSprint); 
     sessionStorage.setItem('calcIndex', calcIndex);

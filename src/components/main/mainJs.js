@@ -4,10 +4,10 @@ import TableQuest from '../table-questions/tableQuest';
 
 
 const MainCenter = (props) => {
-  
+  const sprintResult = localStorage.getItem('resultSprint');
   return (
     <div className='main-sprint'>
-      {/* <Button name={'start-sprint'} text={'Start'} click={start}/> */}
+      <h2 className='sprint-result'>вы набрали {sprintResult} баллов</h2>
       <div className='word-flex'>
         <h1 className='word'>
           {props.myWord} {props.myWordTranslate}
