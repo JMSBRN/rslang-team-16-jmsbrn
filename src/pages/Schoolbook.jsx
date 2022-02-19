@@ -102,6 +102,13 @@ function Schoolbook() {
         <WordView />
       </div>
       <WordsPagination />
+      <div className="schoolbook-games-container">
+        <div className="schoolbook-games-title">Games</div>
+        <div className="schoolbook-games-links">
+          <NavLink to={'/sprint'}>Sprint</NavLink>
+          <NavLink to={'/audioCall'}>AudioCall</NavLink>
+        </div>
+      </div>
     </div>
   );
 }
