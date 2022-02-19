@@ -30,7 +30,7 @@ function WordView() {
   return (
     <div className="word-view">
       {newarr.map((word) => (
-        <div key={word.id} className="word-card-view">
+        <div key={word.id} className={`word-view-card${word.group}`}>
           <img
             src={`https://rslang-team-16-server.herokuapp.com/${word.image}`}
             alt="word-img"

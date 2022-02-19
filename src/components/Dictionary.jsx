@@ -47,7 +47,7 @@ return (
 						key={stage}
 						onClick={setStageNumToLocal}
 						data-num={stage - 1}
-						className="stage"
+						className={`stage${stage-1}`}
 					>{`stage ${stage}`}
 					</button>
 				))
@@ -71,7 +71,7 @@ return (
 						<div
 							onClick={getWordValue}
 							data-word={word.word}
-							className="word"
+							className={`word${word.group}`}
 						>
 							{word.word}
 							<div
