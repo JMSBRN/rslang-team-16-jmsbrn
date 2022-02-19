@@ -30,7 +30,7 @@ function Schoolbook() {
       newArr.push(word);
       localStorage.setItem('wordToLearn',JSON.stringify(newArr));
     }
-    console.log(e.target.classList.toggle('done'));
+    e.target.classList.toggle('done');
   };
    const toggleClassDone = (e) => {
      e.target.classList.toggle('done');
@@ -54,6 +54,7 @@ function Schoolbook() {
        </button>: ''}
       </div>
       <div className="stage-title">Stage {group / 1 + 1}</div>
+      <div>Words</div>
       <div className="words-container">
         <div className="words">
           {words.map((word) => (
