@@ -192,7 +192,7 @@ function App() {
         setStageNumToLocal,
         stages,
         getWordValue,
-        wordSchoolbook
+        wordSchoolbook,
       }}>
        <Header/> 
        <Routes>

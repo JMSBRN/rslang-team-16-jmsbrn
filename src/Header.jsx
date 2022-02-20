@@ -95,12 +95,12 @@ const Header = () => {
       </ul>
       <div className="login-menu-btns-container">
         <div className="out-btn">
-          <button onClick={clearLocalStorage} className="out-btn">
+          <button onClick={clearLocalStorage} className="out-btn" disabled={localStorage.getItem('id')?false: true}>
             Log-out
           </button>
         </div>
         <div className="login-btn">
-          <button onClick={openLogin} className="login-btn">
+          <button  onClick={openLogin} className="login-btn">
             Login
           </button>
         </div>

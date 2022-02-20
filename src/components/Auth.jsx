@@ -13,10 +13,10 @@ function Auth() {
 	};
 	return (
 		<div id='auth' className='auth-hide'>
-			<button onClick={closeAuth} className='auth-close-btn'>logout registration</button>
+			<button onClick={closeAuth} className='auth-close-btn'>to Login </button>
 			<div className="auth-container">
-				<h4 className='auth-title'>Lorem ipsum dolor sit amet consectetur</h4>
-				<p className='auth-paragraf'>Lorem ipsum dolor sit!</p>
+				<h4 className='auth-title'>Please fill in all fields!</h4>
+				<p className='auth-paragraf'>By clicking “Register”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our Cookie Policy.</p>
 				<form className="auth-input-container">
 					<input onChange={handleGetName} className='auth-input' type="text" placeholder='name'/>
 					<input onChange={handleGetEmail} className='auth-input' type="email" placeholder='E-mail'/>

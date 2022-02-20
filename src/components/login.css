@@ -1,13 +1,14 @@
 .login {
 	position: absolute;
 	top: 100px;
-	left: 30%;
-	width: 250px;
-	height: 300px;
-	background-color: rgb(208, 199, 250);
+	left: 35%;
+	width: 400px;
+	height: 600px;
+	background-color: rgb(124, 204, 177);
 	z-index: 1;
 }
 .login-close-btn {
+	margin: 16px;
 	border: none;
 	border-radius: 30px;
 	cursor: pointer;
@@ -15,6 +16,7 @@
 .login-close-btn:hover {
 	background-color: rgb(95, 199, 231);
   color: rgb(255, 255, 255);
+	transition: .3s;
 }
 .login-hide {
 	display: none;
@@ -22,32 +24,36 @@
 .login-container {
 	margin: 0 auto;
 	width: 80%;
-	height: 50%;
+	height: 80%;
 }
 .login-title {
-	font-size: 10px;
-	color: rgb(117, 117, 204);
+	font-size: 16px;
+	color: rgb(253, 253, 253);
 }
 .login-paragraf {
-	font-size: 10px;
-	color: rgb(255, 175, 109);
+	font-size: 16px;
+	color: rgb(255, 255, 255);
 }
 .login-input-container {
 	display: grid;
-	gap: 5px;
+	gap: 10px;
 }
 .login-input {
 	border: navajowhite;
-	font-size: 10px;
+	font-size: 16px;
 	background-color: rgb(254, 255, 255);
 }
 .login-submit-btn {
-	color: blueviolet;
-}
-.login-submit-btn:hover {
-	color: rgb(218, 61, 61);
+	font-size: 20px;
+	border-color: cadetblue;
+	border-style: none;
+	color: rgb(153, 101, 201);
 	cursor: pointer;
 }
+.login-submit-btn:active {
+ background-color: rgb(207, 134, 134);
+}
+
 .login-links-container {
 	display: flex;
 	align-items: center;
@@ -55,13 +61,16 @@
 }
 .login-link {
 	margin-top: 10px;
-	font-size: 10px;
+	font-size: 16px;
 	text-decoration: none;
+	color: rgb(250, 235, 215);
 	cursor: pointer;
 }
 .login-link:hover {
 	color: red;
 }
 .login-checkbox-title {
-	font-size: 10px;
+	border-style: none;
+	font-size: 16px;
+	color: rgb(250, 235, 215);
 }
