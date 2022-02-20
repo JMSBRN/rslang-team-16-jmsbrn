@@ -1,5 +1,9 @@
 .schoolbook {
-
+	background-color: rgba(139, 134, 134, 0.8);
+ background-image: url(../components/assets/img/home-main.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-blend-mode: color;
 }
 .schoolbook-stages {
     margin: 5px;
@@ -110,6 +114,10 @@
 	text-decoration: none;
 	color: rgb(255, 255, 255);
 	font-size: 14px;
+}
+.schoolbook-words-title {
+	font-size: 24px;
+	color: rgb(255, 255, 255);
 }
 .words-container {
 	display: flex;
@@ -236,7 +244,7 @@
 	text-align: center;
 	height: 25px;
 	font-size: 30px;
-	color: rgb(161, 62, 62);
+	color: rgb(255, 255, 255);
 }
 .schoolbook-games-links {
 	display: flex;
@@ -246,11 +254,11 @@
 .schoolbook-games-links a {
  text-decoration: none;
  font-size: 30px;
- color: rgb(47, 93, 192);
+ color: rgb(255, 255, 255);
 }
 .schoolbook-games-links a:hover {
  text-decoration: none;
  font-size: 30px;
- color: rgb(219, 148, 148);
+ color: rgb(197, 182, 182);
 }
 

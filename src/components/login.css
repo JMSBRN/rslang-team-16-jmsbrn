@@ -9,6 +9,7 @@
 }
 .login-close-btn {
 	margin: 16px;
+	width: 43px;
 	border: none;
 	border-radius: 30px;
 	cursor: pointer;

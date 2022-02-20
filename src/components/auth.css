@@ -9,6 +9,7 @@
 }
 .auth-close-btn {
 	margin: 16px;
+	width: 67px;
 	border: none;
 	background-color: rgb(91, 212, 131);
 	color: rgb(255, 255, 255);

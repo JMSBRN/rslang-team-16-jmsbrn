@@ -57,7 +57,7 @@ return (
 			</button>
 		</div>
 		<div className="stage-title">Stage {group / 1 + 1}</div>
-		<div className="dificult-words">Difficult words</div>
+		<div className="dificult-words-title">Difficult words</div>
 		<div className="words-container">
 			<div className="words">
 				{newArr.map((word) => (

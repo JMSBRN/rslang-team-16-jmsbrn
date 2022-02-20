@@ -1,7 +1,12 @@
+
 .words-container {
 	margin-top: 10px;
 	display: flex;
 	align-items: flex-start;
+}
+.difficult-words-title {
+	font-size: 24px;
+	color: rgb(255, 255, 255);
 }
 .dificult-words-remove-btn {
 	position: absolute;

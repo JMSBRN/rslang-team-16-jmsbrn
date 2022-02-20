@@ -54,7 +54,7 @@ function Schoolbook() {
        </button>: ''}
       </div>
       <div className="stage-title">Stage {group / 1 + 1}</div>
-      <div>Words</div>
+      <div className="schoolbook-words-title">Words</div>
       <div className="words-container">
         <div className="words">
           {words.map((word) => (
@@ -103,7 +103,7 @@ function Schoolbook() {
       </div>
       <WordsPagination />
       <div className="schoolbook-games-container">
-        <div className="schoolbook-games-title">Games</div>
+        <div className="schoolbook-games-title">Let's Play Games :)</div>
         <div className="schoolbook-games-links">
           <NavLink to={'/sprint'}>Sprint</NavLink>
           <NavLink to={'/audioCall'}>AudioCall</NavLink>

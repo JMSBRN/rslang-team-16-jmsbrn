@@ -1,44 +1,43 @@
 
 .word-view {
 	width: 300px;
-	height: 600px;
 	border-radius: 5px;
-	font-size: 15px;
+	font-size: 14px;
 	color: rgb(255, 255, 255);
 }
 .word-view-card0 {
 	padding: 10px;
-	height: 550px;
+	height: 600px;
 	border-radius: 5px;
 	background-color: #2cc227;
 }
 .word-view-card1 {
 	padding: 11px;
-	height: 550px;
+	height: 600px;
 	border-radius: 5px;
 	background-color: #a9d62c;
 }
 .word-view-card2 {
 	padding: 10px;
-	height: 550px;
+	height: 600px;
 	border-radius: 5px;
 	background-color: #cec32d;
 }
 .word-view-card3 {
 	padding: 10px;
-	height: 550px;
+	height: 600px;
 	border-radius: 5px;
 	background-color: #eb932f;
 }
 .word-view-card4 {
 	padding: 10px;
-	height: 550px;
+	height: 600px;
 	border-radius: 5px;
 	background-color: #eb6029;
 }
 .word-view-card5 {
 	padding: 10px;
-	height: 550px;
+	height: 600px;
 	border-radius: 5px;
 	background-color: #dd3d3d;
 }
