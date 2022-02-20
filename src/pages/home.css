@@ -22,9 +22,14 @@
 	align-items: center;
 	justify-content: space-around;
 }
-.home-img {
-	width: 350px;
-	margin-left:350px;
+.home-links-title {
+	text-align: center;
+	color: rgb(138, 180, 75);
+}
+.home-img-girl
+ {
+	width: 300px;
+	margin-left:150px;
 }
 .home-nav-links {
 	display: flex;
@@ -34,7 +39,7 @@
 .home-nav-links a {
 	font-size: 30px;
 	text-decoration: none;
-	color: rgb(54, 24, 124);
+	color: rgb(108, 68, 201);
 }
 .home-nav-links a:hover {
 	color: red;
