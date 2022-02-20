@@ -90,7 +90,7 @@ function Schoolbook() {
               </div>
               {
                 localStorage.getItem('id')? 
-                <div onClick={(e) => setWordTolearnToLocal(e,word.word)}
+                <div data-title = "if click word wil transfer in dictionary" onClick={(e) => setWordTolearnToLocal(e,word.word)}
                 className="put-in-dictionary-btn"
                 >
                 difficult

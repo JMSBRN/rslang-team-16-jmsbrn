@@ -1,269 +1,281 @@
 .schoolbook {
-	background-color: rgba(139, 134, 134, 0.8);
- background-image: url(../components/assets/img/home-main.jpg);
- background-repeat: no-repeat;
- background-size: cover;
- background-blend-mode: color;
+  background-color: rgba(139, 134, 134, 0.8);
+  background-image: url(../components/assets/img/home-main.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: color;
 }
 .schoolbook-stages {
-    margin: 5px;
-	  display: flex;
-    flex-direction: row;
-    gap: 10px;
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 .stage {
-	margin-top: 10px;
-	width:80px;
-	height: 30px;
-	display: flex;
-	align-items: center;
+  margin-top: 10px;
+  width: 80px;
+  height: 30px;
+  display: flex;
+  align-items: center;
   justify-content: center;
-	border: none;
-	border-radius: 5px;
-	background-color: #325be4;
-	color: rgb(233, 233, 233);
-	cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #325be4;
+  color: rgb(233, 233, 233);
+  cursor: pointer;
 }
 .stage0 {
-	margin-top: 10px;
-	width:80px;
-	height: 30px;
-	display: flex;
-	align-items: center;
+  margin-top: 10px;
+  width: 80px;
+  height: 30px;
+  display: flex;
+  align-items: center;
   justify-content: center;
-	border: none;
-	border-radius: 5px;
-	background-color: #2cc227;
-	color: rgb(233, 233, 233);
-	cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #2cc227;
+  color: rgb(233, 233, 233);
+  cursor: pointer;
 }
 .stage1 {
-	margin-top: 10px;
-	width:80px;
-	height: 30px;
-	display: flex;
-	align-items: center;
+  margin-top: 10px;
+  width: 80px;
+  height: 30px;
+  display: flex;
+  align-items: center;
   justify-content: center;
-	border: none;
-	border-radius: 5px;
-	background-color: #a9d62c;
-	color: rgb(233, 233, 233);
-	cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #a9d62c;
+  color: rgb(233, 233, 233);
+  cursor: pointer;
 }
 .stage2 {
-	margin-top: 10px;
-	width:80px;
-	height: 30px;
-	display: flex;
-	align-items: center;
+  margin-top: 10px;
+  width: 80px;
+  height: 30px;
+  display: flex;
+  align-items: center;
   justify-content: center;
-	border: none;
-	border-radius: 5px;
-	background-color: #cec32d;
-	color: rgb(233, 233, 233);
-	cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #cec32d;
+  color: rgb(233, 233, 233);
+  cursor: pointer;
 }
 .stage3 {
-	margin-top: 10px;
-	width:80px;
-	height: 30px;
-	display: flex;
-	align-items: center;
+  margin-top: 10px;
+  width: 80px;
+  height: 30px;
+  display: flex;
+  align-items: center;
   justify-content: center;
-	border: none;
-	border-radius: 5px;
-	background-color: #eb932f;
-	color: rgb(233, 233, 233);
-	cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #eb932f;
+  color: rgb(233, 233, 233);
+  cursor: pointer;
 }
 .stage4 {
-	margin-top: 10px;
-	width:80px;
-	height: 30px;
-	display: flex;
-	align-items: center;
+  margin-top: 10px;
+  width: 80px;
+  height: 30px;
+  display: flex;
+  align-items: center;
   justify-content: center;
-	border: none;
-	border-radius: 5px;
-	background-color: #eb6029;
-	color: rgb(233, 233, 233);
-	cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #eb6029;
+  color: rgb(233, 233, 233);
+  cursor: pointer;
 }
 .stage5 {
-	margin-top: 10px;
-	width:80px;
-	height: 30px;
-	display: flex;
-	align-items: center;
+  margin-top: 10px;
+  width: 80px;
+  height: 30px;
+  display: flex;
+  align-items: center;
   justify-content: center;
-	border: none;
-	border-radius: 5px;
-	background-color: #cf1010;
-	color: rgb(233, 233, 233);
-	cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #cf1010;
+  color: rgb(233, 233, 233);
+  cursor: pointer;
 }
 .stage:hover {
-	 color: rgb(238, 132, 132);
-	 transition: all ease 0.3s;
+  color: rgb(238, 132, 132);
+  transition: all ease 0.3s;
 }
 .stage-title {
-	text-align: center;
-	font-size: 25px;
-	color: rgb(255, 255, 255)
+  text-align: center;
+  font-size: 25px;
+  color: rgb(255, 255, 255);
 }
 .stage a {
-	text-decoration: none;
-	color: rgb(255, 255, 255);
-	font-size: 14px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
 }
 .schoolbook-words-title {
-	font-size: 24px;
-	color: rgb(255, 255, 255);
+  font-size: 24px;
+  color: rgb(255, 255, 255);
 }
 .words-container {
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 .words {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 0.5rem;
-	width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  width: 60%;
 }
 .word-card {
-	position: relative;
-	width: 260px;
-	height: 50px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	padding: 7px;
-	background-color: #f3f4f8;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	transition: all ease 0.4s;
+  position: relative;
+  width: 260px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 7px;
+  background-color: #f3f4f8;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all ease 0.4s;
 }
 
 .word-card:hover {
-   color: rgb(253, 0, 0);
- }
-.word-card:focus {
-	position: relative;
-	width: 260px;
-	height: 50px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	padding: 7px;
-	background-color: #b0beec;
-	border-radius: 5px;
-	cursor: pointer;
-	transition: all ease 0.4s;
- }
-.word0 {
-	margin-bottom: 10px;
-	font-size: 22px;
-	color: #078b03;
- }
-.word1 {
-	margin-bottom: 10px;
-	font-size: 22px;
-	color: #7a9b1f;
- }
-.word2 {
-	margin-bottom: 10px;
-	font-size: 22px;
-	color: #aca002;
- }
-.word3 {
-	margin-bottom: 10px;
-	font-size: 22px;
-	color: #c9700a;
- }
-.word4 {
-	margin-bottom: 10px;
-	font-size: 22px;
-	color: #a74924;
- }
-.word5 {
-	margin-bottom: 10px;
-	font-size: 22px;
-	color: #b90404;
- }
-.word-translate {
-	font-size: 12px;
-	text-align: left;
- }
-
- .put-in-dictionary-btn {
-	 position: absolute;
-	 top: 5px;
-	 right: 4px;
-	 width: 48px;
-	 height: 17px;
-	 border: none;
-	 border-radius: 3px;
-	 color: rgb(218, 132, 132);
- }
- .put-in-dictionary-btn.done {
-	 position: absolute;
-	 right: 4px;
-	 width: 48px;
-	 height: 17px;
-	 border: none;
-	 border-radius: 3px;
-	 background-color: rgb(218, 132, 132);
-	 color: rgb(255, 255, 255);
- }
- .studied-word-btn {
-	position: absolute;
-	top: 5px;
-	right: 55px;
-	border: none;
-	color: rgb(62, 194, 84);
+  color: rgb(253, 0, 0);
 }
- .studied-word-btn.done {
-	position: absolute;
-	top: 5px;
-	right: 55px;
-	width: 48px;
-	height: 17px;
-	border: none;
-	border-radius: 3px;
-	background-color: rgb(107, 207, 174);
-	color: rgb(255, 255, 255);
+.word-card:focus {
+  position: relative;
+  width: 260px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 7px;
+  background-color: #b0beec;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all ease 0.4s;
+}
+.word0 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #078b03;
+}
+.word1 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #7a9b1f;
+}
+.word2 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #aca002;
+}
+.word3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #c9700a;
+}
+.word4 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #a74924;
+}
+.word5 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #b90404;
+}
+.word-translate {
+  font-size: 12px;
+  text-align: left;
+}
+
+.put-in-dictionary-btn {
+  position: absolute;
+  top: 5px;
+  right: 4px;
+  width: 48px;
+  height: 17px;
+  border: none;
+  border-radius: 3px;
+  color: rgb(218, 132, 132);
+}
+.put-in-dictionary-btn:hover::after {
+  content: attr(data-title);
+  position: absolute;
+	width: 70px;
+  left: 60px;
+  top: 0px;
+	padding: 3px;
+  z-index: 1;
+  color: rgb(73, 53, 161);
+  background: rgb(255, 255, 255);
+  font-size: 11px;
+	transition: 0.9s;
+}
+
+.put-in-dictionary-btn.done {
+  position: absolute;
+  right: 4px;
+  width: 48px;
+  height: 17px;
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(218, 132, 132);
+  color: rgb(255, 255, 255);
+}
+.studied-word-btn {
+  position: absolute;
+  top: 5px;
+  right: 55px;
+  border: none;
+  color: rgb(62, 194, 84);
+}
+.studied-word-btn.done {
+  position: absolute;
+  top: 5px;
+  right: 55px;
+  width: 48px;
+  height: 17px;
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(107, 207, 174);
+  color: rgb(255, 255, 255);
 }
 .word-view-layout {
-	width: 30px;
-	height: 600px;
+  width: 30px;
+  height: 600px;
 }
 .schoolbook-games-container {
-	width: 100%;
-	height: 110px;
-
+  width: 100%;
+  height: 110px;
 }
 .schoolbook-games-title {
-	padding-top: 10px;
-	text-align: center;
-	height: 25px;
-	font-size: 30px;
-	color: rgb(255, 255, 255);
+  padding-top: 10px;
+  text-align: center;
+  height: 25px;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
 }
 .schoolbook-games-links {
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 .schoolbook-games-links a {
- text-decoration: none;
- font-size: 30px;
- color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
 }
 .schoolbook-games-links a:hover {
- text-decoration: none;
- font-size: 30px;
- color: rgb(197, 182, 182);
+  text-decoration: none;
+  font-size: 30px;
+  color: rgb(197, 182, 182);
 }
-
