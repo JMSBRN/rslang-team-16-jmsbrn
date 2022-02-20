@@ -1,4 +1,6 @@
-
+.schoolbook {
+	height: 1000px;
+}
 .words-container {
 	margin-top: 10px;
 	display: flex;

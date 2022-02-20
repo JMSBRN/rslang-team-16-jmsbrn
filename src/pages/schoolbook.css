@@ -109,6 +109,7 @@
 .stage-title {
 	text-align: center;
 	font-size: 25px;
+	color: rgb(255, 255, 255)
 }
 .stage a {
 	text-decoration: none;
