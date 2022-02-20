@@ -1,43 +1,41 @@
 .home {
-	width: 100%;
-	height: 100%;
-	background-color: rgb(255, 255, 255);
+ margin: 0 auto;
+ height: 1070px;
+ background-image: url(../components/assets/img/home-main.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-blend-mode: color;
+ background-color: rgb(255, 255, 255, 0.8);
 }
-.home-main-title {
-	width: 80%;
-	color: rgb(62, 72, 161);
+.home-title h1 {
+	margin-left: 50px;
+  font-size: 80px;
+	color: rgb(104, 104, 243);
 }
-.home-description-container {
-	width: 90%;
-	color: rgb(81, 216, 133);
+.home-title h3 {
+	margin-left: 150px;
+	font-size: 52px;
+	color: brown;
 }
-.home-main-img-container {
- margin-left: 30%;
-	width: 400px;
-	height: 300px;
-	margin-bottom: 0;
+.home-main-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.home-img {
+	width: 350px;
+	margin-left:350px;
 }
 .home-nav-links {
 	display: flex;
-	gap: 5px;
+	flex-wrap: wrap;
+	gap: 0.3rem;
 }
-.home-link {
+.home-nav-links a {
+	font-size: 30px;
 	text-decoration: none;
-	color: rgb(134, 197, 199);
+	color: rgb(54, 24, 124);
 }
-.home-link:hover {
-	text-decoration: none;
-	color: rgb(29, 80, 82);
-}
-.home-video-btn {
-	border: none;
-	border-radius: 2px;
-	background-color: antiquewhite;
-	color: rgb(101, 101, 221);
-	cursor: pointer;
-}
-.home-video-btn:hover {
-	border: none;
-	background-color: rgb(233, 184, 120);
-	cursor: pointer;
+.home-nav-links a:hover {
+	color: red;
 }
