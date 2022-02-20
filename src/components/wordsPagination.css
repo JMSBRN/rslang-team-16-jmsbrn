@@ -7,4 +7,7 @@
   display: flex;
   justify-content: center;
 }
-
+.MuiButtonBase-root.MuiPaginationItem-root.MuiPaginationItem-sizeMedium.MuiPaginationItem-text {
+  font-size: 22px;
+  color: white;
+}
