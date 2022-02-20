@@ -1,6 +1,26 @@
 .about {
 	height: 1000px;
-	background-color: rgb(220, 231, 235);
+	background-color: rgb(220, 231, 235, 0.7);
   color: rgb(5, 36, 12);
 	font-size: 20px;
+	background-image: url(../components/assets/img/students.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 100%;
+	background-blend-mode: color;
+}
+.students-cards-container {
+  display: flex;
+	gap: 20px;
+}
+.students-card {
+	margin-top: 300px;
+	width: 300px;
+	height: 400px;
+	background-color: rgb(255, 255, 255, 0.5);
+}
+.student-foto {
+	width: 280px;
+	height:180px;
+  
 }

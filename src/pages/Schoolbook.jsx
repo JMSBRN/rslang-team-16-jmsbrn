@@ -99,6 +99,7 @@ function Schoolbook() {
             </button>
           ))}
         </div>
+        <div className="word-view-layout"></div>
         <WordView />
       </div>
       <WordsPagination />

@@ -235,6 +235,10 @@
 	background-color: rgb(107, 207, 174);
 	color: rgb(255, 255, 255);
 }
+.word-view-layout {
+	width: 30px;
+	height: 600px;
+}
 .schoolbook-games-container {
 	width: 100%;
 	height: 110px;
