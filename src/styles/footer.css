@@ -16,7 +16,14 @@
 	text-decoration: none;
 	color: rgb(255, 255, 255);
 }
+
 .footer-rsSchool-link {
 	text-decoration: none;
 	color: rgb(255, 255, 255);
+}
+
+.footer-git-log {
+
+	background-image: url(../components/assets/svg/github.svg);
+	background-position: center;
 }
