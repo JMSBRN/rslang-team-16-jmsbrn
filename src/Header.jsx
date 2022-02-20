@@ -10,6 +10,7 @@ const Header = () => {
   const { openMenu, openLogin, clearLocalStorage } = useContext(Context);
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
+  const nameUser = localStorage.getItem('name');
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -93,6 +94,7 @@ const Header = () => {
           </NavLink>
         </button>
       </ul>
+      <div className="name-user">{nameUser?JSON.parse(nameUser):''}</div>
       <div className="login-menu-btns-container">
         <div className="out-btn">
           <button onClick={clearLocalStorage} className="out-btn" disabled={localStorage.getItem('id')?false: true}>

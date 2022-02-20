@@ -18,8 +18,8 @@ function Login() {
 				<h4 className='login-title'>Already have an account? Log in! All fields marked with an asterisk (*) are mandatory.</h4>
 				<p className='login-paragraf'>If you are not registered? Please follow the link below.</p>
 				<form className="login-input-container">
-					<input onChange={handleGetEmail} className='login-input' type="email" placeholder='E-mail'/>
-					<input onChange={handleGetPassword}   id="login-input-psw" className='login-input' name='password' type="password" autoComplete="on" minLength={8} placeholder='Password' required/>
+					<input onChange={handleGetEmail} className='login-input' type="email" placeholder=' * E-mail'/>
+					<input onChange={handleGetPassword}   id="login-input-psw" className='login-input' name='password' type="password" autoComplete="on" minLength={8} placeholder='* Password' required/>
 					<button onClick={getLoginValues} className='login-submit-btn'>Login</button>
 				</form>
 				<input onClick={showPassword} type="checkbox" name="login-show-psw"/>
