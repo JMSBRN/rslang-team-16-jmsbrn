@@ -1,0 +1,35 @@
+.audio-game {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../audiogame/images/bg.jpg);
+}
+
+
+.game-controls {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.game-controls a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  width: 350px;
+  height: 80px;
+  background: rgba(3, 0, 184, 0.575);
+  margin: 5px;
+  transition: .3s;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.game-controls a:hover {
+  background: rgba(255, 255, 255, 0.445);
+  color: rgb(0, 0, 0);
+}

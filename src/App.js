@@ -18,6 +18,9 @@ import Auth from './components/Auth';
 import Sprint from './components/Sprint';
 import AudioCall from './components/AudioCall';
 import Dictionary from './components/Dictionary';
+import AudioTranslateGame from './components/audiocall/trash/AudioTranslateGame';
+import AudioWordGame from './components/audiocall/trash/AudioWordGame';
+
 
 function App() {
   const pageFromLocal = JSON.parse(localStorage.getItem('page'));
@@ -151,6 +154,8 @@ function App() {
             <Route path='games' element={<Games/>}/>
             <Route path='sprint' element={<Sprint/>}/>
             <Route path='audioCall' element={<AudioCall/>}/>
+            <Route path='audio-translate-game/1' element={<AudioTranslateGame/>}/>
+            <Route path='audio-find-game/1' element={<AudioWordGame/>}/>
             <Route path='schoolbook' element={<Schoolbook/>}/>
             <Route path='schoolbook/dictionary' element={<Dictionary/>}/>
             <Route path='statistics' element={<Statistics/>}/>

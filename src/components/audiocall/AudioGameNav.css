@@ -1,0 +1,40 @@
+.audio-game-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 50px 20px 0;
+}
+
+.audio-game-nav button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.audio-nav-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 5%;
+}
+
+.audio-nav-close {
+  display: flex;
+}
+
+.audio-shots span {
+  display: inline-flex;
+  background: rgb(0, 255, 55);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 2px;
+}
+
+.green-heart {
+  background: green !important;
+}
+
+.red-heart {
+  background: red !important;
+}
