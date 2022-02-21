@@ -1,5 +1,5 @@
-import MainCenter from './components/main/mainJs';
-import HeaderSprint from './components/header/header';
+import MainCenter from './componentsSprint/main/mainJs';
+import HeaderSprint from './componentsSprint/header/header';
 import ButtonSprint from './elements/button/button-sprint';
 import { getWords } from './constants/requests';
 import { useState, useEffect, useContext } from 'react';
