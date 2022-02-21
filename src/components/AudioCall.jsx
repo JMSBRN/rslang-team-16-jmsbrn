@@ -1,8 +1,10 @@
 import React from 'react'
-
+import AudioCallApp from '../components/audioCall/AudioCallApp'
 function AudioCall() {
 	return (
-		<div>AudioCall</div>
+		<div>
+		 <AudioCallApp/>	
+		</div>
 	)
 }
 
