@@ -4,10 +4,11 @@
   margin: 0;
 }
 
-body {
+.sprint-main {
   height: 100vh;;
   background: url(./assets/picture/hero-banner.jpg) no-repeat;
-  background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
   margin: 0;
   padding: 0;
   text-align: center;

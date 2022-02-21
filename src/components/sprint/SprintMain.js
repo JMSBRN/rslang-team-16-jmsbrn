@@ -8,7 +8,7 @@ import '../sprint/SprintMain.css';
 
 // const SprintIndexContext = React.createContext();
 
-function App() {
+function  SprintMain() {
 
   const bas = 'https://rslang-team-16-server.herokuapp.com';
   const myWords = `${bas}/words/`;
@@ -56,7 +56,7 @@ function App() {
   }, [words]);
 
   return (
-    <div className="App">
+    <div className="sprint-main">
       
       <HeaderSprint />
       <ButtonSprint name={'start-sprint'} text={'Start'} click={start}/>
@@ -69,4 +69,4 @@ function App() {
   );
 }
 
-export default App;
+export default SprintMain;
