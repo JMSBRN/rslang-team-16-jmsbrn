@@ -40,7 +40,7 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-image: url('https://rslang-team23-alexk08.netlify.app/images/games/sound-waves.png');
+  background-image: url(../images/sound-waves.png);
   background-size: cover;
   background-position: center;
   background-color: rgba(87, 83, 83, 0.658);

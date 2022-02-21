@@ -6,8 +6,8 @@ const AudioTranslateGame = () => {
   const [star, setStar] = useState(5)
   return (
     <>
-        <AudioGameNav star={star}/>
-        <AudioGameField setStar={(s)=>setStar(s)}  star={star}/>
+      <AudioGameNav star={star}/>
+      <AudioGameField setStar={(s)=>setStar(s)}  star={star}/>
     </>
   )
 };

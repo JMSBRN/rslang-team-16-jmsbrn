@@ -2,7 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { BsArrowRight } from "react-icons/bs";
-
+import CorrectSound from '../sounds/correct.mp3'
+import ErrorSound from '../sounds/error.mp3'
 import "./AudioGameField.css";
 import AudioGameNav from "../AudioGameNav";
 import Loader from "../Loader";
@@ -102,14 +103,14 @@ const AudioGameField = (props) => {
   const playCorrectSound = () => {
     const correct = new Audio();
     isMute ? correct.muted = true : correct.muted = false;
-    correct.src = `https://rslang-team23-alexk08.netlify.app/audio/correct.mp3`;
+    correct.src = CorrectSound;
     correct.play();
   };
   const playWrongSound = () => {
     const wrong = new Audio();
     isMute ? wrong.muted = true : wrong.muted = false;
 
-    wrong.src = `https://rslang-team23-alexk08.netlify.app/audio/error.mp3`;
+    wrong.src = ErrorSound;
     wrong.play();
   };
 
