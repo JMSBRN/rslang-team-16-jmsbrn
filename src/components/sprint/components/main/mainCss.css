@@ -1,0 +1,49 @@
+.main-sprint {
+  height: 80ch;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  /* padding-top: 10vh; */
+}
+
+.start-sprint{
+  background-color: aquamarine;
+  position: absolute;
+  width: 15vw;
+  height: 7vh;
+  top: 30vh;
+  right: 20vh;
+}
+
+.sprint-result {
+  display: flex;
+  justify-content: center;
+  color:chocolate
+}
+
+.main-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.roller {
+  margin-bottom: 50vh;
+}
+
+.main-line img {
+  height: 30ch; 
+  margin-left: 15ch;
+}
+
+.word {
+  width: 100%;
+  font-size: 10vh;
+  position: fixed;
+  top: 50%;
+  right: 10%;
+  color:brown; 
+  margin: 0;
+}

@@ -1,8 +1,10 @@
 import React from 'react'
-
+import SprintMain from '../components/sprint/SprintMain'
 function Sprint() {
 	return (
-		<div>Sprint</div>
+		<div>
+		 <SprintMain/>	
+		</div>
 	)
 }
 

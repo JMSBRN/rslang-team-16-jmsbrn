@@ -1,0 +1,19 @@
+.header-sprint {
+  padding-left: 20vw;
+  padding-top: 5vh;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+.header-sprint img {
+  height: 5vh;
+}
+.header-sprint button {
+  background-color:aquamarine;
+  margin-left: 10vw;
+}
+.headerSprinttext {
+  color: blueviolet;
+  font-size: 3ch;
+}
