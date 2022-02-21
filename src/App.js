@@ -18,6 +18,7 @@ import Auth from './components/Auth';
 import Sprint from './components/Sprint';
 import AudioCall from './components/AudioCall';
 import Dictionary from './components/Dictionary';
+import AudioGameField from './components/audioCall/components/audiogame/AudioGameField';
 
 function App() {
   const pageFromLocal = JSON.parse(localStorage.getItem('page'));
@@ -151,6 +152,8 @@ function App() {
             <Route path='games' element={<Games/>}/>
             <Route path='sprint' element={<Sprint/>}/>
             <Route path='audioCall' element={<AudioCall/>}/>
+            <Route path="/audio-translate-game/:id" element={<AudioGameField type={'word'}/>}/>
+            <Route path="/audio-find-game/:id" element={<AudioGameField  type={'sentence'}/>}/>
             <Route path='schoolbook' element={<Schoolbook/>}/>
             <Route path='schoolbook/dictionary' element={<Dictionary/>}/>
             <Route path='statistics' element={<Statistics/>}/>
