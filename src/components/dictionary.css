@@ -1,0 +1,22 @@
+.schoolbook {
+	height: 1000px;
+}
+.words-container {
+	margin-top: 10px;
+	display: flex;
+	align-items: flex-start;
+}
+.difficult-words-title {
+	font-size: 24px;
+	color: rgb(255, 255, 255);
+}
+.dificult-words-remove-btn {
+	position: absolute;
+	top: 5px;
+	right: 4px;
+	width: 48px;
+	height: 17px;
+	border: none;
+	border-radius: 3px;
+	color: rgb(218, 132, 132);
+}

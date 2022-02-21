@@ -1,0 +1,77 @@
+.login {
+	position: absolute;
+	top: 100px;
+	left: 35%;
+	width: 400px;
+	height: 600px;
+	background-color: rgb(124, 204, 177);
+	z-index: 1;
+}
+.login-close-btn {
+	margin: 16px;
+	width: 43px;
+	border: none;
+	border-radius: 30px;
+	cursor: pointer;
+}
+.login-close-btn:hover {
+	background-color: rgb(95, 199, 231);
+  color: rgb(255, 255, 255);
+	transition: .3s;
+}
+.login-hide {
+	display: none;
+}
+.login-container {
+	margin: 0 auto;
+	width: 80%;
+	height: 80%;
+}
+.login-title {
+	font-size: 16px;
+	color: rgb(253, 253, 253);
+}
+.login-paragraf {
+	font-size: 16px;
+	color: rgb(255, 255, 255);
+}
+.login-input-container {
+	display: grid;
+	gap: 10px;
+}
+.login-input {
+	border: navajowhite;
+	font-size: 16px;
+	background-color: rgb(254, 255, 255);
+}
+.login-submit-btn {
+	font-size: 20px;
+	border-color: cadetblue;
+	border-style: none;
+	color: rgb(153, 101, 201);
+	cursor: pointer;
+}
+.login-submit-btn:active {
+ background-color: rgb(207, 134, 134);
+}
+
+.login-links-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.login-link {
+	margin-top: 10px;
+	font-size: 16px;
+	text-decoration: none;
+	color: rgb(250, 235, 215);
+	cursor: pointer;
+}
+.login-link:hover {
+	color: red;
+}
+.login-checkbox-title {
+	border-style: none;
+	font-size: 16px;
+	color: rgb(250, 235, 215);
+}

@@ -1,0 +1,55 @@
+.about {
+	height: 1000px;
+	background-color: rgb(220, 231, 235, 0.7);
+  color: rgb(5, 36, 12);
+	font-size: 20px;
+	background-image: url(../components/assets/img/students.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 100%;
+	background-blend-mode: color;
+}
+
+.about-title {
+	padding: 20px;
+	font-size: 50px;
+	color: rgb(139, 125, 125);
+}
+.students-cards-container {
+  display: flex;
+	justify-content: space-around;
+	gap: 20px;
+}
+.students-card {
+	margin-top: 300px;
+	width: 300px;
+	height: 400px;
+	background-color: rgb(255, 255, 255, 0.5);
+}
+.student-foto-one {
+	width: 300px;
+	height: 200px;
+	background-image: url(../components/assets/img/foto-students/ivan_hubarau.png);
+  background-position: center;
+	background-size: 100%;
+}
+.student-foto-two {
+	width: 300px;
+	height: 200px;
+	background-image: url(../components/assets/img/foto-students/debaev.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.student-foto-three {
+	width: 300px;
+	height: 200px;
+	background-image: url(../components/assets/img/foto-students/zakhavai.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.studet-work-with-title {
+	color: rgb(134, 90, 33);
+}
+.about-cv-link {
+	color: rgb(134, 90, 33);
+}

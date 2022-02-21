@@ -1,0 +1,24 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@import url('./styles/footer.css');
+@import url('./styles/layout.css');
+@import url('./styles/header.css');
+@import url('./styles/noPage.css');
+@import url('./pages/home.css');
+@import url('./pages/games.css');
+@import url('./pages/about.css');
+@import url('./pages/schoolbook.css');
+@import url('./pages/statistics.css');
+@import url('./components/login.css');
+@import url('./components/auth.css');
+@import url('./components/menu.css');
+@import url('./components/wordsPagination.css');
+@import url('./components/wordView.css');
+@import url('./components/dictionary.css');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}

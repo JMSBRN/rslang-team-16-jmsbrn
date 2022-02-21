@@ -1,0 +1,68 @@
+.header {
+	padding: 5px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.header-nv-btns {
+	display: flex;
+	gap: 10px;
+	width: 400px;
+}
+.active-link {
+	color: rgb(168, 164, 164);
+}
+.header-nav-btn {
+	background-color: transparent;
+	font-size: 20px;
+	border: none;
+}
+.header-nav-btn a {
+	text-decoration: none;
+}
+.out-btn,
+.login-btn,
+.menu-btn  {
+	width: 60px;
+	height: 40px;
+	font-size: 20px;
+	border: none;
+}
+.login-menu-btns-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 300px;
+	margin-right: 15px;
+}
+.out-btn,
+.login-btn,
+.menu-btn {
+	width: 100px;
+	margin: 5px;
+	background-color: transparent;
+}
+.menu-btn {
+  background-size: 50%;
+	background-repeat: no-repeat;
+}
+#fade-button {
+	color: transparent;
+	background-color: transparent;
+	border-radius: 0px;
+}
+#fade-button:active {
+	color: transparent;
+}
+#fade-button a {
+	font-size: 19px;
+	text-transform: capitalize;
+	text-decoration: none;
+	color: rgb(18, 18, 70);
+}
+#fade-menu a {
+ font-size: 15px;
+ text-decoration: none;
+ color: rgb(6, 6, 104);
+}
