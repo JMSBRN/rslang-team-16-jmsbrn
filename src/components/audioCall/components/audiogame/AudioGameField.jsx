@@ -73,6 +73,7 @@ const AudioGameField = (props) => {
       .catch((err) => {});
   };
 
+
   const getRandomWords = (items = []) => {
     setShowAnswer(false);
     if (items.length > 5) {
@@ -96,9 +97,9 @@ const AudioGameField = (props) => {
   
   const playAudio = (src) => {
     spellingWord.src = src ? src : `https://rslang-team-16-server.herokuapp.com/${
-      type === "word" ? word.audio : word.audioMeaning
+      type === "words" ? word.audio : word.audioMeaning
     }`;
-    spellingWord.play();
+    
   };
   const playCorrectSound = () => {
     const correct = new Audio();
