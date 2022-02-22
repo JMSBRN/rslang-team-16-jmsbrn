@@ -60,16 +60,13 @@ const AudioGameField = (props) => {
   });
    
   
-  const getWords = (p = 0) => {
+  const getWords = async (p = 0) => {
     setLoader(true);
-    axios
-      .get(`https://rslang-team-16-server.herokuapp.com/words?group=${+levelParam.id - 1}&page=${p}`)
-      .then((res) => {
-        getRandomWords(res.data ? res.data : []);
-        setList(res.data ? res.data : []);
+      const res = await fetch(`https://rslang-team-16-server.herokuapp.com/words?group=${+levelParam.id - 1}&page=${p}`)
+      const data = await res.json();
+        getRandomWords(data);
+        setList(data);
         setLoader(false);
-      })
-      .catch((err) => {});
   };
 
   const getRandomWords = (items = []) => {
